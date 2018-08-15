@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LaunchViewController" id="BYZ-38-t0r" customClass="LaunchViewController" customModule="WarcraftCharacterGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JQi-IY-djj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zc6-k4-84A" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="107" y="216" width="161" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="DKQ-Rj-0Jx" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="14" y="398" width="347" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="wcgLogo" destination="zc6-k4-84A" id="6st-1z-moI"/>
+                        <outlet property="wcgLogoText" destination="DKQ-Rj-0Jx" id="21w-yK-GVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="35.467980295566505"/>
+        </scene>
+        <!--Generator View Controller-->
+        <scene sceneID="8ek-IC-orI">
+            <objects>
+                <viewController storyboardIdentifier="GeneratorViewController" id="Row-vs-ecA" customClass="GeneratorViewController" customModule="WarcraftCharacterGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3i-3j-oqU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AzerothMap" translatesAutoresizingMaskIntoConstraints="NO" id="fT3-ZQ-mWj">
+                                <rect key="frame" x="0.0" y="-35" width="1160" height="883"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp8-h9-W9X">
+                                <rect key="frame" x="321" y="65" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="glyph-info"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-vl-F1q" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="56" y="420" width="262" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn-generate-lg"/>
+                                <connections>
+                                    <action selector="btnGenerateTouch:" destination="Row-vs-ecA" eventType="touchDown" id="IBW-vu-DWS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="intro-view" translatesAutoresizingMaskIntoConstraints="NO" id="KfK-wa-rOx" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="23" y="221" width="330" height="323"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTV-GL-KLT" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="67" y="442" width="251" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn-okay-sm"/>
+                                <connections>
+                                    <action selector="btnIntroConfirmTouch:" destination="Row-vs-ecA" eventType="touchDown" id="q73-gb-5Xw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-op60" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-Al-XzB">
+                                <rect key="frame" x="16" y="65" width="266" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42844069004058838" green="0.39302700757980347" blue="0.33005142211914062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="LQw-HM-Ldb"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnGenerate" destination="Cfh-vl-F1q" id="71I-1t-naS"/>
+                        <outlet property="btnIntro" destination="tTV-GL-KLT" id="SFl-CF-MMj"/>
+                        <outlet property="imgBackground" destination="fT3-ZQ-mWj" id="kFm-CK-ItQ"/>
+                        <outlet property="imgIntro" destination="KfK-wa-rOx" id="HuS-pW-wSy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMb-rT-BY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="34.729064039408868"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AzerothMap" width="3018" height="2016"/>
+        <image name="SplashBackground" width="750" height="1624"/>
+        <image name="WCGLogo" width="322" height="322"/>
+        <image name="WCGLogo-Text" width="694" height="178"/>
+        <image name="WCGLogo-op60" width="532" height="44"/>
+        <image name="btn-generate-lg" width="524" height="168"/>
+        <image name="btn-okay-sm" width="502" height="100"/>
+        <image name="glyph-info" width="50" height="50"/>
+        <image name="intro-view" width="660" height="646"/>
+    </resources>
+</document>

@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		662E3D0721219FF50013CA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E3D0621219FF50013CA64 /* AppDelegate.swift */; };
+		662E3D0921219FF50013CA64 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E3D0821219FF50013CA64 /* LaunchViewController.swift */; };
+		662E3D0C21219FF50013CA64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E3D0A21219FF50013CA64 /* Main.storyboard */; };
+		662E3D0E21219FF60013CA64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662E3D0D21219FF60013CA64 /* Assets.xcassets */; };
+		662E3D1121219FF60013CA64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E3D0F21219FF60013CA64 /* LaunchScreen.storyboard */; };
+		663410D52122F2C300695516 /* warcraft-level-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 663410D42122F2C300695516 /* warcraft-level-up.mp3 */; };
+		663410D82122F31E00695516 /* AVAudioPlayer+Norfare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */; };
+		66C7396B2121A62B00B710C7 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7396A2121A62B00B710C7 /* GeneratorViewController.swift */; };
+		CF777ECC5B75F54F5B133448 /* Pods_WarcraftCharacterGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2357ED616432819643D09836 /* Pods-WarcraftCharacterGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarcraftCharacterGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WarcraftCharacterGenerator/Pods-WarcraftCharacterGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		662E3D0321219FF50013CA64 /* WarcraftCharacterGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarcraftCharacterGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		662E3D0621219FF50013CA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		662E3D0821219FF50013CA64 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		662E3D0B21219FF50013CA64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		662E3D0D21219FF60013CA64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		662E3D1021219FF60013CA64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		662E3D1221219FF60013CA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663410D42122F2C300695516 /* warcraft-level-up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "warcraft-level-up.mp3"; path = "../../../../../../../Downloads/warcraft-level-up.mp3"; sourceTree = "<group>"; };
+		663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPlayer+Norfare.swift"; sourceTree = "<group>"; };
+		66C7396A2121A62B00B710C7 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WarcraftCharacterGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B6E1E136FC4FF38C2EFA28 /* Pods-WarcraftCharacterGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarcraftCharacterGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-WarcraftCharacterGenerator/Pods-WarcraftCharacterGenerator.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		662E3D0021219FF50013CA64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF777ECC5B75F54F5B133448 /* Pods_WarcraftCharacterGenerator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56F389386219A7298CB02853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		662E3CFA21219FF50013CA64 = {
+			isa = PBXGroup;
+			children = (
+				662E3D0521219FF50013CA64 /* WarcraftCharacterGenerator */,
+				662E3D0421219FF50013CA64 /* Products */,
+				7BF7D0D6E980FEAE3776763A /* Pods */,
+				56F389386219A7298CB02853 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		662E3D0421219FF50013CA64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				662E3D0321219FF50013CA64 /* WarcraftCharacterGenerator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		662E3D0521219FF50013CA64 /* WarcraftCharacterGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				662E3D0621219FF50013CA64 /* AppDelegate.swift */,
+				663410D22122F2AD00695516 /* Resources */,
+				663410D62122F2E300695516 /* Extensions */,
+				66C739682121A5A200B710C7 /* View */,
+				662E3D0D21219FF60013CA64 /* Assets.xcassets */,
+				662E3D0F21219FF60013CA64 /* LaunchScreen.storyboard */,
+				662E3D1221219FF60013CA64 /* Info.plist */,
+			);
+			path = WarcraftCharacterGenerator;
+			sourceTree = "<group>";
+		};
+		663410D22122F2AD00695516 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				663410D92122FB7F00695516 /* Fonts */,
+				663410D32122F2B600695516 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		663410D32122F2B600695516 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				663410D42122F2C300695516 /* warcraft-level-up.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		663410D62122F2E300695516 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		663410D92122FB7F00695516 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		66C739682121A5A200B710C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66C739692121A5B200B710C7 /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66C739692121A5B200B710C7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				662E3D0A21219FF50013CA64 /* Main.storyboard */,
+				66C7396A2121A62B00B710C7 /* GeneratorViewController.swift */,
+				662E3D0821219FF50013CA64 /* LaunchViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7BF7D0D6E980FEAE3776763A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2357ED616432819643D09836 /* Pods-WarcraftCharacterGenerator.debug.xcconfig */,
+				88B6E1E136FC4FF38C2EFA28 /* Pods-WarcraftCharacterGenerator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		662E3D0221219FF50013CA64 /* WarcraftCharacterGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 662E3D1521219FF60013CA64 /* Build configuration list for PBXNativeTarget "WarcraftCharacterGenerator" */;
+			buildPhases = (
+				4E292B82A83561CCC8656947 /* [CP] Check Pods Manifest.lock */,
+				662E3CFF21219FF50013CA64 /* Sources */,
+				662E3D0021219FF50013CA64 /* Frameworks */,
+				662E3D0121219FF50013CA64 /* Resources */,
+				9791699FD2445C345811C608 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WarcraftCharacterGenerator;
+			productName = WarcraftCharacterGenerator;
+			productReference = 662E3D0321219FF50013CA64 /* WarcraftCharacterGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		662E3CFB21219FF50013CA64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Norfare;
+				TargetAttributes = {
+					662E3D0221219FF50013CA64 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 662E3CFE21219FF50013CA64 /* Build configuration list for PBXProject "WarcraftCharacterGenerator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 662E3CFA21219FF50013CA64;
+			productRefGroup = 662E3D0421219FF50013CA64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				662E3D0221219FF50013CA64 /* WarcraftCharacterGenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		662E3D0121219FF50013CA64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663410D52122F2C300695516 /* warcraft-level-up.mp3 in Resources */,
+				662E3D1121219FF60013CA64 /* LaunchScreen.storyboard in Resources */,
+				662E3D0E21219FF60013CA64 /* Assets.xcassets in Resources */,
+				662E3D0C21219FF50013CA64 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E292B82A83561CCC8656947 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WarcraftCharacterGenerator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9791699FD2445C345811C608 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WarcraftCharacterGenerator/Pods-WarcraftCharacterGenerator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WarcraftCharacterGenerator/Pods-WarcraftCharacterGenerator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		662E3CFF21219FF50013CA64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663410D82122F31E00695516 /* AVAudioPlayer+Norfare.swift in Sources */,
+				662E3D0921219FF50013CA64 /* LaunchViewController.swift in Sources */,
+				66C7396B2121A62B00B710C7 /* GeneratorViewController.swift in Sources */,
+				662E3D0721219FF50013CA64 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		662E3D0A21219FF50013CA64 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				662E3D0B21219FF50013CA64 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		662E3D0F21219FF60013CA64 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				662E3D1021219FF60013CA64 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		662E3D1321219FF60013CA64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		662E3D1421219FF60013CA64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		662E3D1621219FF60013CA64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2357ED616432819643D09836 /* Pods-WarcraftCharacterGenerator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWNUKDX368;
+				INFOPLIST_FILE = WarcraftCharacterGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.norfare.WarcraftCharacterGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		662E3D1721219FF60013CA64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B6E1E136FC4FF38C2EFA28 /* Pods-WarcraftCharacterGenerator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWNUKDX368;
+				INFOPLIST_FILE = WarcraftCharacterGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.norfare.WarcraftCharacterGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		662E3CFE21219FF50013CA64 /* Build configuration list for PBXProject "WarcraftCharacterGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662E3D1321219FF60013CA64 /* Debug */,
+				662E3D1421219FF60013CA64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		662E3D1521219FF60013CA64 /* Build configuration list for PBXNativeTarget "WarcraftCharacterGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662E3D1621219FF60013CA64 /* Debug */,
+				662E3D1721219FF60013CA64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 662E3CFB21219FF50013CA64 /* Project object */;
+}
