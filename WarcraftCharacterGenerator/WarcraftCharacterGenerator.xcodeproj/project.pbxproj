@@ -14,7 +14,14 @@
 		662E3D1121219FF60013CA64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E3D0F21219FF60013CA64 /* LaunchScreen.storyboard */; };
 		663410D52122F2C300695516 /* warcraft-level-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 663410D42122F2C300695516 /* warcraft-level-up.mp3 */; };
 		663410D82122F31E00695516 /* AVAudioPlayer+Norfare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */; };
+		66A36047212590D70082C766 /* WarcraftCharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A36046212590D70082C766 /* WarcraftCharacterGenerator.swift */; };
+		66A3604A212591FA0082C766 /* WarcraftRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A36049212591FA0082C766 /* WarcraftRace.swift */; };
+		66A3604C212599AF0082C766 /* WarcraftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3604B212599AF0082C766 /* WarcraftClass.swift */; };
+		66A360502125A1B00082C766 /* wcg.realm in Resources */ = {isa = PBXBuildFile; fileRef = 66A3604F2125A1B00082C766 /* wcg.realm */; };
 		66C7396B2121A62B00B710C7 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7396A2121A62B00B710C7 /* GeneratorViewController.swift */; };
+		66D3ABE52126E85E00EF152A /* WarcraftFaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */; };
+		66D3ABE72126F08C00EF152A /* WarcraftClassSpecialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */; };
+		66D3ABE92126F22F00EF152A /* GenerationHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE82126F22F00EF152A /* GenerationHistory.swift */; };
 		CF777ECC5B75F54F5B133448 /* Pods_WarcraftCharacterGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +36,14 @@
 		662E3D1221219FF60013CA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		663410D42122F2C300695516 /* warcraft-level-up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "warcraft-level-up.mp3"; path = "../../../../../../../Downloads/warcraft-level-up.mp3"; sourceTree = "<group>"; };
 		663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPlayer+Norfare.swift"; sourceTree = "<group>"; };
+		66A36046212590D70082C766 /* WarcraftCharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftCharacterGenerator.swift; sourceTree = "<group>"; };
+		66A36049212591FA0082C766 /* WarcraftRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftRace.swift; sourceTree = "<group>"; };
+		66A3604B212599AF0082C766 /* WarcraftClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftClass.swift; sourceTree = "<group>"; };
+		66A3604F2125A1B00082C766 /* wcg.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = wcg.realm; sourceTree = "<group>"; };
 		66C7396A2121A62B00B710C7 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftFaction.swift; sourceTree = "<group>"; };
+		66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftClassSpecialization.swift; sourceTree = "<group>"; };
+		66D3ABE82126F22F00EF152A /* GenerationHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationHistory.swift; sourceTree = "<group>"; };
 		889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WarcraftCharacterGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B6E1E136FC4FF38C2EFA28 /* Pods-WarcraftCharacterGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarcraftCharacterGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-WarcraftCharacterGenerator/Pods-WarcraftCharacterGenerator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,8 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				662E3D0621219FF50013CA64 /* AppDelegate.swift */,
+				66A36045212590C00082C766 /* Generator */,
 				663410D22122F2AD00695516 /* Resources */,
 				663410D62122F2E300695516 /* Extensions */,
+				66A36048212591DB0082C766 /* Model */,
 				66C739682121A5A200B710C7 /* View */,
 				662E3D0D21219FF60013CA64 /* Assets.xcassets */,
 				662E3D0F21219FF60013CA64 /* LaunchScreen.storyboard */,
@@ -89,6 +105,7 @@
 		663410D22122F2AD00695516 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				66A3604D2125A0340082C766 /* Realm */,
 				663410D92122FB7F00695516 /* Fonts */,
 				663410D32122F2B600695516 /* Sounds */,
 			);
@@ -116,6 +133,34 @@
 			children = (
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		66A36045212590C00082C766 /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				66A36046212590D70082C766 /* WarcraftCharacterGenerator.swift */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
+		66A36048212591DB0082C766 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66A36049212591FA0082C766 /* WarcraftRace.swift */,
+				66A3604B212599AF0082C766 /* WarcraftClass.swift */,
+				66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */,
+				66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */,
+				66D3ABE82126F22F00EF152A /* GenerationHistory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66A3604D2125A0340082C766 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				66A3604F2125A1B00082C766 /* wcg.realm */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		66C739682121A5A200B710C7 /* View */ = {
@@ -205,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A360502125A1B00082C766 /* wcg.realm in Resources */,
 				663410D52122F2C300695516 /* warcraft-level-up.mp3 in Resources */,
 				662E3D1121219FF60013CA64 /* LaunchScreen.storyboard in Resources */,
 				662E3D0E21219FF60013CA64 /* Assets.xcassets in Resources */,
@@ -262,10 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D3ABE92126F22F00EF152A /* GenerationHistory.swift in Sources */,
+				66A3604A212591FA0082C766 /* WarcraftRace.swift in Sources */,
 				663410D82122F31E00695516 /* AVAudioPlayer+Norfare.swift in Sources */,
 				662E3D0921219FF50013CA64 /* LaunchViewController.swift in Sources */,
 				66C7396B2121A62B00B710C7 /* GeneratorViewController.swift in Sources */,
+				66D3ABE72126F08C00EF152A /* WarcraftClassSpecialization.swift in Sources */,
+				66A3604C212599AF0082C766 /* WarcraftClass.swift in Sources */,
 				662E3D0721219FF50013CA64 /* AppDelegate.swift in Sources */,
+				66D3ABE52126E85E00EF152A /* WarcraftFaction.swift in Sources */,
+				66A36047212590D70082C766 /* WarcraftCharacterGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

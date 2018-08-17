@@ -15,8 +15,11 @@ class GeneratorViewController: UIViewController
     @IBOutlet weak var imgIntro: SpringImageView!
     @IBOutlet weak var btnGenerate: SpringButton!
     @IBOutlet weak var btnIntro: SpringButton!
+    @IBOutlet weak var imgWcgLogo: SpringImageView!
+    @IBOutlet weak var imgWcgLogoText: SpringImageView!
     
     let audioPlayer: NorfareAudioPlayer = NorfareAudioPlayer()
+    let generator: WarcraftCharacterGenerator = WarcraftCharacterGenerator()
     
     //Define the scroll directions for the background image.
     enum BackgroundScrollDirection
@@ -28,10 +31,8 @@ class GeneratorViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        btnGenerate.isHidden = true
-        
-
+        //generator.getRealmInfo()
+        generator.renameField()
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -95,8 +96,24 @@ class GeneratorViewController: UIViewController
     
     @IBAction func btnGenerateTouch(_ sender: SpringButton)
     {
+        btnGenerate.animation = "fadeOut"
+        btnGenerate.curve = "easeIn"
+        btnGenerate.duration = 1.0
+        btnGenerate.autohide = true
         
-        print("test")
+        imgWcgLogo.animation = "fadeOut"
+        imgWcgLogo.curve = "easeIn"
+        imgWcgLogo.duration = 1.0
+        imgWcgLogo.autohide = true
+        
+        imgWcgLogoText.animation = "fadeOut"
+        imgWcgLogoText.curve = "easeIn"
+        imgWcgLogoText.duration = 1.0
+        imgWcgLogoText.autohide = true
+        
+        btnGenerate.animate()
+        imgWcgLogo.animate()
+        imgWcgLogoText.animate()
     }
     
     @IBAction func btnIntroConfirmTouch(_ sender: Any)
@@ -115,5 +132,7 @@ class GeneratorViewController: UIViewController
         btnIntro.animate()
         
         btnGenerate.isHidden = false
+        imgWcgLogo.isHidden = false
+        imgWcgLogoText.isHidden = false
     }
 }

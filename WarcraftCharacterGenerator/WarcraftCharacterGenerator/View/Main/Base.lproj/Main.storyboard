@@ -58,8 +58,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="glyph-info"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-vl-F1q" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="420" width="262" height="84"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-vl-F1q" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="57" y="525" width="262" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-generate-lg"/>
                                 <connections>
@@ -82,6 +82,14 @@
                                 <rect key="frame" x="16" y="65" width="266" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8bG-Od-mEY" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="107" y="206" width="161" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="H1j-4C-b7P" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="14" y="393" width="347" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.42844069004058838" green="0.39302700757980347" blue="0.33005142211914062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="LQw-HM-Ldb"/>
@@ -91,6 +99,8 @@
                         <outlet property="btnIntro" destination="tTV-GL-KLT" id="SFl-CF-MMj"/>
                         <outlet property="imgBackground" destination="fT3-ZQ-mWj" id="kFm-CK-ItQ"/>
                         <outlet property="imgIntro" destination="KfK-wa-rOx" id="HuS-pW-wSy"/>
+                        <outlet property="imgWcgLogo" destination="8bG-Od-mEY" id="K9Z-ve-vDV"/>
+                        <outlet property="imgWcgLogoText" destination="H1j-4C-b7P" id="dHv-iT-G2g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMb-rT-BY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
