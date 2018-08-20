@@ -32,7 +32,7 @@ class GeneratorViewController: UIViewController
     {
         super.viewDidLoad()
         //generator.getRealmInfo()
-        generator.renameField()
+        //generator.renameField()
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -114,6 +114,10 @@ class GeneratorViewController: UIViewController
         btnGenerate.animate()
         imgWcgLogo.animate()
         imgWcgLogoText.animate()
+        
+        let character = generator.generateNewCharacter()
+        
+        
     }
     
     @IBAction func btnIntroConfirmTouch(_ sender: Any)
