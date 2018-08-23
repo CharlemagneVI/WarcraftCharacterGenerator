@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -57,13 +58,16 @@
                                 <rect key="frame" x="321" y="65" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="glyph-info"/>
+                                <connections>
+                                    <segue destination="G8V-6l-PHc" kind="show" id="1s8-9c-Dmu"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-vl-F1q" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="57" y="525" width="262" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-generate-lg"/>
                                 <connections>
-                                    <action selector="btnGenerateTouch:" destination="Row-vs-ecA" eventType="touchDown" id="IBW-vu-DWS"/>
+                                    <action selector="btnGenerateTouch:" destination="Row-vs-ecA" eventType="touchUpInside" id="5OK-M2-JDZ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="intro-view" translatesAutoresizingMaskIntoConstraints="NO" id="KfK-wa-rOx" customClass="SpringImageView" customModule="Spring">
@@ -75,7 +79,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-okay-sm"/>
                                 <connections>
-                                    <action selector="btnIntroConfirmTouch:" destination="Row-vs-ecA" eventType="touchDown" id="q73-gb-5Xw"/>
+                                    <action selector="btnIntroConfirmTouch:" destination="Row-vs-ecA" eventType="touchUpInside" id="GzX-qt-JNg"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-op60" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-Al-XzB">
@@ -90,12 +94,21 @@
                                 <rect key="frame" x="14" y="393" width="347" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-uG-BcC" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="71" y="673" width="234" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="btn-generate-sm"/>
+                                <connections>
+                                    <action selector="btnGenerateSmallTouch:" destination="Row-vs-ecA" eventType="touchDown" id="nXB-mg-cgr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42844069004058838" green="0.39302700757980347" blue="0.33005142211914062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="LQw-HM-Ldb"/>
                     </view>
                     <connections>
                         <outlet property="btnGenerate" destination="Cfh-vl-F1q" id="71I-1t-naS"/>
+                        <outlet property="btnGenerateSmall" destination="Bbi-uG-BcC" id="7fN-Wu-vgH"/>
                         <outlet property="btnIntro" destination="tTV-GL-KLT" id="SFl-CF-MMj"/>
                         <outlet property="imgBackground" destination="fT3-ZQ-mWj" id="kFm-CK-ItQ"/>
                         <outlet property="imgIntro" destination="KfK-wa-rOx" id="HuS-pW-wSy"/>
@@ -107,6 +120,38 @@
             </objects>
             <point key="canvasLocation" x="864.79999999999995" y="34.729064039408868"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="Tiq-Mh-mSr">
+            <objects>
+                <viewController storyboardIdentifier="info" id="G8V-6l-PHc" customClass="InfoViewController" customModule="WarcraftCharacterGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XFa-fI-LxE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="iON-UI-qYz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOJ-GO-Li4">
+                                <rect key="frame" x="37" y="71" width="17" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="close-icon"/>
+                                <connections>
+                                    <action selector="CloseInfo:" destination="G8V-6l-PHc" eventType="touchUpInside" id="nzs-aa-C5a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lVK-7Q-kDe"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCloseInfo" destination="EOJ-GO-Li4" id="2NR-61-fcF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ami-DC-cYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808.8" y="34.729064039408868"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AzerothMap" width="3018" height="2016"/>
@@ -115,7 +160,9 @@
         <image name="WCGLogo-Text" width="694" height="178"/>
         <image name="WCGLogo-op60" width="532" height="44"/>
         <image name="btn-generate-lg" width="524" height="168"/>
+        <image name="btn-generate-sm" width="468" height="76"/>
         <image name="btn-okay-sm" width="502" height="100"/>
+        <image name="close-icon" width="42" height="44"/>
         <image name="glyph-info" width="50" height="50"/>
         <image name="intro-view" width="660" height="646"/>
     </resources>

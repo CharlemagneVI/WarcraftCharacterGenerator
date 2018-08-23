@@ -12,6 +12,7 @@ class WarcraftClassSpecialization: Object
 {
     @objc dynamic var id_spec: Int = 0
     @objc dynamic var spec_name: String = ""
+    @objc dynamic var spec_img: String = ""
     
     override static func primaryKey() -> String? {
         return "id_spec"

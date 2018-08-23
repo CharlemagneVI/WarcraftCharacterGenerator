@@ -10,11 +10,19 @@ import Foundation
 
 class WarcraftCharacter
 {
-    var faction_name: String = ""
+    var faction: WarcraftFaction
     
-    var race_name: String = ""
+    var race: WarcraftRace
     
-    var class_name: String = ""
+    var warcraft_class: WarcraftClass
     
-    var spec_name: String = ""
+    var spec: WarcraftClassSpecialization
+    
+    init(faction: WarcraftFaction, race: WarcraftRace, warcraft_class: WarcraftClass, spec: WarcraftClassSpecialization)
+    {
+        self.faction = faction
+        self.race = race
+        self.warcraft_class = warcraft_class
+        self.spec = spec
+    }
 }

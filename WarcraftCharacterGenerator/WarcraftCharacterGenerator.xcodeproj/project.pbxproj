@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66262119212ECC0300F86531 /* CharacterCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66262118212ECC0300F86531 /* CharacterCard.xib */; };
+		6626211B212ECDCF00F86531 /* CharacterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6626211A212ECDCF00F86531 /* CharacterCard.swift */; };
 		662E3D0721219FF50013CA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E3D0621219FF50013CA64 /* AppDelegate.swift */; };
 		662E3D0921219FF50013CA64 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E3D0821219FF50013CA64 /* LaunchViewController.swift */; };
 		662E3D0C21219FF50013CA64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E3D0A21219FF50013CA64 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		662E3D1121219FF60013CA64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662E3D0F21219FF60013CA64 /* LaunchScreen.storyboard */; };
 		663410D52122F2C300695516 /* warcraft-level-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 663410D42122F2C300695516 /* warcraft-level-up.mp3 */; };
 		663410D82122F31E00695516 /* AVAudioPlayer+Norfare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */; };
+		66799198212EE0510069A744 /* UIView+Norfare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66799197212EE0510069A744 /* UIView+Norfare.swift */; };
 		6692A37C212ADA9100FE950A /* WarcraftCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692A37B212ADA9100FE950A /* WarcraftCharacter.swift */; };
 		66A36047212590D70082C766 /* WarcraftCharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A36046212590D70082C766 /* WarcraftCharacterGenerator.swift */; };
 		66A3604A212591FA0082C766 /* WarcraftRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A36049212591FA0082C766 /* WarcraftRace.swift */; };
@@ -23,11 +26,14 @@
 		66D3ABE52126E85E00EF152A /* WarcraftFaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */; };
 		66D3ABE72126F08C00EF152A /* WarcraftClassSpecialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */; };
 		66D3ABE92126F22F00EF152A /* GenerationHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE82126F22F00EF152A /* GenerationHistory.swift */; };
+		66EED000212D7B19007EAC9A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EECFFF212D7B19007EAC9A /* InfoViewController.swift */; };
 		CF777ECC5B75F54F5B133448 /* Pods_WarcraftCharacterGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2357ED616432819643D09836 /* Pods-WarcraftCharacterGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarcraftCharacterGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WarcraftCharacterGenerator/Pods-WarcraftCharacterGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		66262118212ECC0300F86531 /* CharacterCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCard.xib; sourceTree = "<group>"; };
+		6626211A212ECDCF00F86531 /* CharacterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCard.swift; sourceTree = "<group>"; };
 		662E3D0321219FF50013CA64 /* WarcraftCharacterGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarcraftCharacterGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662E3D0621219FF50013CA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		662E3D0821219FF50013CA64 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +43,7 @@
 		662E3D1221219FF60013CA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		663410D42122F2C300695516 /* warcraft-level-up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "warcraft-level-up.mp3"; path = "../../../../../../../Downloads/warcraft-level-up.mp3"; sourceTree = "<group>"; };
 		663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPlayer+Norfare.swift"; sourceTree = "<group>"; };
+		66799197212EE0510069A744 /* UIView+Norfare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Norfare.swift"; sourceTree = "<group>"; };
 		6692A37B212ADA9100FE950A /* WarcraftCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftCharacter.swift; sourceTree = "<group>"; };
 		66A36046212590D70082C766 /* WarcraftCharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftCharacterGenerator.swift; sourceTree = "<group>"; };
 		66A36049212591FA0082C766 /* WarcraftRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftRace.swift; sourceTree = "<group>"; };
@@ -46,6 +53,7 @@
 		66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftFaction.swift; sourceTree = "<group>"; };
 		66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftClassSpecialization.swift; sourceTree = "<group>"; };
 		66D3ABE82126F22F00EF152A /* GenerationHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationHistory.swift; sourceTree = "<group>"; };
+		66EECFFF212D7B19007EAC9A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WarcraftCharacterGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B6E1E136FC4FF38C2EFA28 /* Pods-WarcraftCharacterGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarcraftCharacterGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-WarcraftCharacterGenerator/Pods-WarcraftCharacterGenerator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +76,15 @@
 				889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66262117212ECBED00F86531 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				66262118212ECC0300F86531 /* CharacterCard.xib */,
+				6626211A212ECDCF00F86531 /* CharacterCard.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 		662E3CFA21219FF50013CA64 = {
@@ -126,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */,
+				66799197212EE0510069A744 /* UIView+Norfare.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -169,6 +187,7 @@
 		66C739682121A5A200B710C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				66262117212ECBED00F86531 /* Character */,
 				66C739692121A5B200B710C7 /* Main */,
 			);
 			path = View;
@@ -180,6 +199,7 @@
 				662E3D0A21219FF50013CA64 /* Main.storyboard */,
 				66C7396A2121A62B00B710C7 /* GeneratorViewController.swift */,
 				662E3D0821219FF50013CA64 /* LaunchViewController.swift */,
+				66EECFFF212D7B19007EAC9A /* InfoViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -258,6 +278,7 @@
 				662E3D1121219FF60013CA64 /* LaunchScreen.storyboard in Resources */,
 				662E3D0E21219FF60013CA64 /* Assets.xcassets in Resources */,
 				662E3D0C21219FF50013CA64 /* Main.storyboard in Resources */,
+				66262119212ECC0300F86531 /* CharacterCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66799198212EE0510069A744 /* UIView+Norfare.swift in Sources */,
 				66D3ABE92126F22F00EF152A /* GenerationHistory.swift in Sources */,
 				66A3604A212591FA0082C766 /* WarcraftRace.swift in Sources */,
 				663410D82122F31E00695516 /* AVAudioPlayer+Norfare.swift in Sources */,
@@ -319,8 +341,10 @@
 				66D3ABE72126F08C00EF152A /* WarcraftClassSpecialization.swift in Sources */,
 				66A3604C212599AF0082C766 /* WarcraftClass.swift in Sources */,
 				6692A37C212ADA9100FE950A /* WarcraftCharacter.swift in Sources */,
+				6626211B212ECDCF00F86531 /* CharacterCard.swift in Sources */,
 				662E3D0721219FF50013CA64 /* AppDelegate.swift in Sources */,
 				66D3ABE52126E85E00EF152A /* WarcraftFaction.swift in Sources */,
+				66EED000212D7B19007EAC9A /* InfoViewController.swift in Sources */,
 				66A36047212590D70082C766 /* WarcraftCharacterGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWNUKDX368;
 				INFOPLIST_FILE = WarcraftCharacterGenerator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,6 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HWNUKDX368;
 				INFOPLIST_FILE = WarcraftCharacterGenerator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

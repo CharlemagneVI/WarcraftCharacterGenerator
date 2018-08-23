@@ -13,6 +13,7 @@ class WarcraftClass: Object
     @objc dynamic var id_class: Int = 0
     @objc dynamic var class_name: String = ""
     let class_specs = List<WarcraftClassSpecialization>()
+    @objc dynamic var class_img: String = ""
     
     override static func primaryKey() -> String? {
         return "id_class"

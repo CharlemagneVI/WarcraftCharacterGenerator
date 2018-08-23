@@ -40,8 +40,6 @@ class WarcraftCharacterGenerator
         randomGen = Int.random(in: 0 ... (faction?.faction_race.count)! - 1)
         let race = faction?.faction_race[randomGen]
         
-        print("faction race count: " + String((faction?.faction_race.count)!))
-        
         //Generate a random number for class
         randomGen = Int.random(in: 0 ... (race?.race_classes.count)! - 1)
         let warcraft_class = race?.race_classes[randomGen]
@@ -51,11 +49,7 @@ class WarcraftCharacterGenerator
         let class_spec = warcraft_class?.class_specs[randomGen]
         
         //Store everything in character object
-        let character = WarcraftCharacter()
-        character.faction_name = (faction?.faction_name)!
-        character.race_name = (race?.race_name)!
-        character.class_name = (warcraft_class?.class_name)!
-        character.spec_name = (class_spec?.spec_name)!
+        let character = WarcraftCharacter(faction: (faction)!, race: (race)!, warcraft_class: (warcraft_class)!, spec: (class_spec)!)
         
         return character
     }

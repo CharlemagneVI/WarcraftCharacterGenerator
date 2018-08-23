@@ -17,9 +17,12 @@ class GeneratorViewController: UIViewController
     @IBOutlet weak var btnIntro: SpringButton!
     @IBOutlet weak var imgWcgLogo: SpringImageView!
     @IBOutlet weak var imgWcgLogoText: SpringImageView!
+    @IBOutlet weak var btnGenerateSmall: SpringButton!
     
     let audioPlayer: NorfareAudioPlayer = NorfareAudioPlayer()
     let generator: WarcraftCharacterGenerator = WarcraftCharacterGenerator()
+    
+    var firstOpen: Bool = false
     
     //Define the scroll directions for the background image.
     enum BackgroundScrollDirection
@@ -37,19 +40,23 @@ class GeneratorViewController: UIViewController
     
     override func viewDidAppear(_ animated: Bool)
     {
-        //Start the parallax scroll of our background image
-        scrollBackground(direction: .right, image: imgBackground)
-        
-        imgIntro.animation = "slideDown"
-        imgIntro.curve = "easeIn"
-        imgIntro.duration = 1.0
-        
-        btnIntro.animation = "slideDown"
-        btnIntro.curve = "easeIn"
-        btnIntro.duration = 1.0
-        
-        imgIntro.animate()
-        btnIntro.animate()
+        if(!firstOpen)
+        {
+            //Start the parallax scroll of our background image
+            scrollBackground(direction: .right, image: imgBackground)
+            
+            imgIntro.animation = "slideDown"
+            imgIntro.curve = "easeIn"
+            imgIntro.duration = 1.0
+            
+            btnIntro.animation = "slideDown"
+            btnIntro.curve = "easeIn"
+            btnIntro.duration = 1.0
+            
+            imgIntro.animate()
+            btnIntro.animate()
+            firstOpen = true
+        }
     }
     
     //Override the status bar to white.
@@ -117,7 +124,15 @@ class GeneratorViewController: UIViewController
         
         let character = generator.generateNewCharacter()
         
+        let characterCardView = UIView.fromNib(name: "CharacterCard") as CharacterCard
+        characterCardView.populateCharacterCard(character: character)
+        view.addSubview(characterCardView)
         
+        btnGenerateSmall.isHidden = false
+        btnGenerateSmall.animation = "fadeIn"
+        btnGenerateSmall.curve = "easeIn"
+        btnGenerateSmall.duration = 2.5
+        btnGenerateSmall.animate()
     }
     
     @IBAction func btnIntroConfirmTouch(_ sender: Any)
@@ -138,5 +153,10 @@ class GeneratorViewController: UIViewController
         btnGenerate.isHidden = false
         imgWcgLogo.isHidden = false
         imgWcgLogoText.isHidden = false
+    }
+    
+    @IBAction func btnGenerateSmallTouch(_ sender: Any)
+    {
+        let character = generator.generateNewCharacter()
     }
 }
