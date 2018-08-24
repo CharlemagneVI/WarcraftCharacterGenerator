@@ -2,47 +2,29 @@
 //  CharacterCard.swift
 //  WarcraftCharacterGenerator
 //
-//  Created by Chad Fager on 8/23/18.
+//  Created by Chad Fager on 8/24/18.
 //  Copyright © 2018 Norfare. All rights reserved.
 //
 
 import UIKit
-import Spring
 
 class CharacterCard: UIView
 {
-    let nibName: String = "CharacterCard"
-    var contentView: UIView?
     
-    @IBOutlet weak var characterPortrait: UIImageView!
-    @IBOutlet weak var classPortrait: UIImageView!
-    @IBOutlet weak var classLabel: UILabel!
-    @IBOutlet weak var raceLabel: UILabel!
+    @IBOutlet var warcraftClassPortrait: UIImageView!
+    @IBOutlet var warcraftCharacterPortrait: UIImageView!
+    @IBOutlet var warcraftRaceLabel: UILabel!
+    @IBOutlet var warcraftClassLabel: UILabel!
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        guard let view = self.loadViewFromNib() else { return }
-        view.frame = self.bounds
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 23.0
-        self.addSubview(view)
-        contentView = view
-        contentView?.isUserInteractionEnabled = true
-    }
     
-    private func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        self.isUserInteractionEnabled = true
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
-    
-    public func populateCharacterCard(character: WarcraftCharacter)
+    public func populateCharacterCard(warcraftCharacter: WarcraftCharacter)
     {
-        characterPortrait.image = UIImage(named: character.race.race_img)
-        classPortrait.image = UIImage(named: character.warcraft_class.class_img)
-        raceLabel.text = character.race.race_name
-        classLabel.text = character.spec.spec_name + " " + character.warcraft_class.class_name
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 23.0
+        
+        warcraftCharacterPortrait.image = UIImage(named: warcraftCharacter.race.race_img)
+        warcraftClassPortrait.image = UIImage(named: warcraftCharacter.warcraft_class.class_img)
+        warcraftRaceLabel.text = warcraftCharacter.race.race_name
+        warcraftClassLabel.text = warcraftCharacter.spec.spec_name + " " + warcraftCharacter.warcraft_class.class_name
     }
 }

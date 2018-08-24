@@ -10,6 +10,6 @@ import UIKit
 
 extension UIView {
     class func fromNib<T: UIView>(name: String) -> T {
-        return Bundle.main.loadNibNamed(String(describing: name), owner: nil, options: nil)![0] as! T
+        return Bundle.main.loadNibNamed(String(describing: name), owner: self, options: nil)![0] as! T
     }
 }

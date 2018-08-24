@@ -24,6 +24,8 @@ class GeneratorViewController: UIViewController
     
     var firstOpen: Bool = false
     
+    var currentCharacterCard: CharacterCard?
+    
     //Define the scroll directions for the background image.
     enum BackgroundScrollDirection
     {
@@ -122,11 +124,15 @@ class GeneratorViewController: UIViewController
         imgWcgLogo.animate()
         imgWcgLogoText.animate()
         
-        let character = generator.generateNewCharacter()
+        let warcraftCharacter = generator.generateNewCharacter()
         
-        let characterCardView = UIView.fromNib(name: "CharacterCard") as CharacterCard
-        characterCardView.populateCharacterCard(character: character)
+        let characterCardView = UIView.fromNib(name: "CharacterCard") as! CharacterCard
+        characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
+        characterCardView.center = view.convert(view.center, from: view.superview)
+        
+        //characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
         view.addSubview(characterCardView)
+        currentCharacterCard = characterCardView
         
         btnGenerateSmall.isHidden = false
         btnGenerateSmall.animation = "fadeIn"
@@ -157,6 +163,16 @@ class GeneratorViewController: UIViewController
     
     @IBAction func btnGenerateSmallTouch(_ sender: Any)
     {
-        let character = generator.generateNewCharacter()
+        let warcraftCharacter = generator.generateNewCharacter()
+        
+        currentCharacterCard?.isHidden = true
+        
+        let characterCardView = UIView.fromNib(name: "CharacterCard") as! CharacterCard
+        characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
+        characterCardView.center = view.convert(view.center, from: view.superview)
+        
+        //characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
+        view.addSubview(characterCardView)
+        currentCharacterCard = characterCardView
     }
 }
