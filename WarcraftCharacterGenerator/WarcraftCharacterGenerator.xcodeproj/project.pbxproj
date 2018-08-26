@@ -26,6 +26,8 @@
 		66D3ABE52126E85E00EF152A /* WarcraftFaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */; };
 		66D3ABE72126F08C00EF152A /* WarcraftClassSpecialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */; };
 		66D3ABE92126F22F00EF152A /* GenerationHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE82126F22F00EF152A /* GenerationHistory.swift */; };
+		66DC57562132D856009FC4C0 /* LifeCraft_Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66DC57542132D855009FC4C0 /* LifeCraft_Font.ttf */; };
+		66DC57572132D856009FC4C0 /* Friz Quadrata Std Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 66DC57552132D856009FC4C0 /* Friz Quadrata Std Medium.otf */; };
 		66EED000212D7B19007EAC9A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EECFFF212D7B19007EAC9A /* InfoViewController.swift */; };
 		CF777ECC5B75F54F5B133448 /* Pods_WarcraftCharacterGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,8 @@
 		66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftFaction.swift; sourceTree = "<group>"; };
 		66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftClassSpecialization.swift; sourceTree = "<group>"; };
 		66D3ABE82126F22F00EF152A /* GenerationHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationHistory.swift; sourceTree = "<group>"; };
+		66DC57542132D855009FC4C0 /* LifeCraft_Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LifeCraft_Font.ttf; sourceTree = "<group>"; };
+		66DC57552132D856009FC4C0 /* Friz Quadrata Std Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Friz Quadrata Std Medium.otf"; sourceTree = "<group>"; };
 		66EECFFF212D7B19007EAC9A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		889EC8A6B1B5DF979CD031BC /* Pods_WarcraftCharacterGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WarcraftCharacterGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B6E1E136FC4FF38C2EFA28 /* Pods-WarcraftCharacterGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarcraftCharacterGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-WarcraftCharacterGenerator/Pods-WarcraftCharacterGenerator.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 		663410D92122FB7F00695516 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				66DC57552132D856009FC4C0 /* Friz Quadrata Std Medium.otf */,
+				66DC57542132D855009FC4C0 /* LifeCraft_Font.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -276,7 +282,9 @@
 				66A360502125A1B00082C766 /* wcg.realm in Resources */,
 				663410D52122F2C300695516 /* warcraft-level-up.mp3 in Resources */,
 				662E3D1121219FF60013CA64 /* LaunchScreen.storyboard in Resources */,
+				66DC57562132D856009FC4C0 /* LifeCraft_Font.ttf in Resources */,
 				662E3D0C21219FF50013CA64 /* Main.storyboard in Resources */,
+				66DC57572132D856009FC4C0 /* Friz Quadrata Std Medium.otf in Resources */,
 				66C1C7DD213032D500F791A2 /* Assets.xcassets in Resources */,
 				66262119212ECC0300F86531 /* CharacterCard.xib in Resources */,
 			);

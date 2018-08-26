@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Spring
 
-class CharacterCard: UIView
+class CharacterCard: SpringView
 {
     
     @IBOutlet var warcraftClassPortrait: UIImageView!
@@ -22,7 +23,23 @@ class CharacterCard: UIView
         self.clipsToBounds = true
         self.layer.cornerRadius = 23.0
         
-        warcraftCharacterPortrait.image = UIImage(named: warcraftCharacter.race.race_img)
+        if(warcraftCharacter.race.alt_race_img != nil)
+        {
+            let randomGen = Int.random(in: 1 ... 2)
+            if(randomGen == 1)
+            {
+                warcraftCharacterPortrait.image = UIImage(named: warcraftCharacter.race.race_img)
+            }
+            else
+            {
+                warcraftCharacterPortrait.image = UIImage(named: warcraftCharacter.race.alt_race_img!)
+            }
+        }
+        else
+        {
+            warcraftCharacterPortrait.image = UIImage(named: warcraftCharacter.race.race_img)
+        }
+        
         warcraftClassPortrait.image = UIImage(named: warcraftCharacter.warcraft_class.class_img)
         warcraftRaceLabel.text = warcraftCharacter.race.race_name
         warcraftClassLabel.text = warcraftCharacter.spec.spec_name + " " + warcraftCharacter.warcraft_class.class_name

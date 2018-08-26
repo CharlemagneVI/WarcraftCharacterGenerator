@@ -11,6 +11,8 @@ import UIKit
 class InfoViewController: UIViewController
 {
     @IBOutlet weak var btnCloseInfo: UIButton!
+    @IBOutlet var legalText: UITextView!
+    @IBOutlet var legalButton: UIButton!
     
     override func viewDidLoad()
     {
@@ -26,5 +28,19 @@ class InfoViewController: UIViewController
     @IBAction func CloseInfo(_ sender: Any)
     {
         self.dismiss(animated: true)
+    }
+    
+    @IBAction func showLegal(_ sender: Any)
+    {
+        if(legalText.isHidden)
+        {
+            legalText.isHidden = false
+            legalButton.setTitle("Hide Legal", for: .normal)
+        }
+        else
+        {
+            legalText.isHidden = true
+            legalButton.setTitle("Legal", for: .normal)
+        }
     }
 }

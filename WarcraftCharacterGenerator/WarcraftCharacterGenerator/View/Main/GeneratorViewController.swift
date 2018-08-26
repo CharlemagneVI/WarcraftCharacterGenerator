@@ -103,6 +103,23 @@ class GeneratorViewController: UIViewController
         }
     }
     
+    private func pauseBackground(layer: CALayer)
+    {
+        let pausedTime: CFTimeInterval = layer.convertTime(CACurrentMediaTime(), from: nil)
+        layer.speed = 0.0
+        layer.timeOffset = pausedTime
+    }
+    
+    private func resumeBackground(layer: CALayer)
+    {
+        let pausedTime: CFTimeInterval = layer.timeOffset
+        layer.speed = 1.0
+        layer.timeOffset = 0.0
+        layer.beginTime = 0.0
+        let timeSincePause: CFTimeInterval = layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
+        layer.beginTime = timeSincePause
+    }
+    
     @IBAction func btnGenerateTouch(_ sender: SpringButton)
     {
         btnGenerate.animation = "fadeOut"
@@ -133,6 +150,10 @@ class GeneratorViewController: UIViewController
         //characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
         view.addSubview(characterCardView)
         currentCharacterCard = characterCardView
+        characterCardView.animation = "slideLeft"
+        characterCardView.curve = "easeIn"
+        characterCardView.duration = 1.0
+        characterCardView.animate()
         
         btnGenerateSmall.isHidden = false
         btnGenerateSmall.animation = "fadeIn"
@@ -156,16 +177,35 @@ class GeneratorViewController: UIViewController
         imgIntro.animate()
         btnIntro.animate()
         
+        btnGenerate.animation = "fadeIn"
+        btnGenerate.duration = 0.6
+        
+        imgWcgLogo.animation = "fadeIn"
+        imgWcgLogo.duration = 0.6
+        
+        imgWcgLogoText.animation = "fadeIn"
+        imgWcgLogoText.duration = 0.6
+        
         btnGenerate.isHidden = false
+        btnGenerate.animate()
+        
         imgWcgLogo.isHidden = false
+        imgWcgLogo.animate()
+        
         imgWcgLogoText.isHidden = false
+        imgWcgLogoText.animate()
     }
     
     @IBAction func btnGenerateSmallTouch(_ sender: Any)
     {
         let warcraftCharacter = generator.generateNewCharacter()
         
-        currentCharacterCard?.isHidden = true
+        currentCharacterCard?.animation = "slideLeft"
+        currentCharacterCard?.curve = "easeIn"
+        currentCharacterCard?.duration = 1.0
+        currentCharacterCard?.autohide = true
+        currentCharacterCard?.center.x = view.superview!.frame.width - ((currentCharacterCard?.frame.width)! * 2)
+        currentCharacterCard?.animate()
         
         let characterCardView = UIView.fromNib(name: "CharacterCard") as! CharacterCard
         characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
@@ -173,6 +213,15 @@ class GeneratorViewController: UIViewController
         
         //characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
         view.addSubview(characterCardView)
+        characterCardView.animation = "slideLeft"
+        characterCardView.curve = "easeIn"
+        characterCardView.duration = 1.0
+        characterCardView.animate()
         currentCharacterCard = characterCardView
+    }
+    
+    @IBAction func infoTouchOpen(_ sender: Any)
+    {
+        pauseBackground(layer: imgBackground.layer)
     }
 }

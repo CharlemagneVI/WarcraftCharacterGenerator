@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Friz Quadrata Std Medium.otf">
+            <string>FrizQuadrataStd</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Launch View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -59,6 +64,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="glyph-info"/>
                                 <connections>
+                                    <action selector="infoTouchOpen:" destination="Row-vs-ecA" eventType="touchUpInside" id="0kc-M6-RKi"/>
                                     <segue destination="G8V-6l-PHc" kind="show" id="1s8-9c-Dmu"/>
                                 </connections>
                             </button>
@@ -140,12 +146,34 @@
                                     <action selector="CloseInfo:" destination="G8V-6l-PHc" eventType="touchUpInside" id="nzs-aa-C5a"/>
                                 </connections>
                             </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-UK-fGG">
+                                <rect key="frame" x="67" y="169" width="240" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">DISCLAIMER: Warcraft Character Generator is in no way affiliated with Blizzard Entertainment. All images and fonts are copyrighted by Blizzard Entertainment and fall within the realm of fair use.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-JN-2MK">
+                                <rect key="frame" x="251" y="66" width="101" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="17"/>
+                                <state key="normal" title="Legal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showLegal:" destination="G8V-6l-PHc" eventType="touchUpInside" id="kY2-i9-el4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lVK-7Q-kDe"/>
                     </view>
                     <connections>
                         <outlet property="btnCloseInfo" destination="EOJ-GO-Li4" id="2NR-61-fcF"/>
+                        <outlet property="legalButton" destination="vn0-JN-2MK" id="zYU-Hd-lJ9"/>
+                        <outlet property="legalText" destination="lcE-UK-fGG" id="zoJ-1j-7L6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ami-DC-cYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
