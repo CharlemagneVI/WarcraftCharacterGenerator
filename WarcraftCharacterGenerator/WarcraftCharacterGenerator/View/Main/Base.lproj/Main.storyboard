@@ -146,7 +146,7 @@
                                     <action selector="CloseInfo:" destination="G8V-6l-PHc" eventType="touchUpInside" id="nzs-aa-C5a"/>
                                 </connections>
                             </button>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-UK-fGG">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-UK-fGG" customClass="SpringTextView" customModule="Spring">
                                 <rect key="frame" x="67" y="169" width="240" height="251"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -166,14 +166,37 @@
                                     <action selector="showLegal:" destination="G8V-6l-PHc" eventType="touchUpInside" id="kY2-i9-el4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP5-Js-C2H">
+                                <rect key="frame" x="140" y="446" width="94" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kc7-p6-Uyu" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="107" y="169" width="161" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="3aC-QW-6vX" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="43" y="338" width="288" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-T5-qCy" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="26" y="508" width="196" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lVK-7Q-kDe"/>
                     </view>
                     <connections>
                         <outlet property="btnCloseInfo" destination="EOJ-GO-Li4" id="2NR-61-fcF"/>
+                        <outlet property="imgWcgLogo" destination="Kc7-p6-Uyu" id="ucN-9f-AMV"/>
+                        <outlet property="imgWcgLogoText" destination="3aC-QW-6vX" id="SR2-da-32U"/>
                         <outlet property="legalButton" destination="vn0-JN-2MK" id="zYU-Hd-lJ9"/>
-                        <outlet property="legalText" destination="lcE-UK-fGG" id="zoJ-1j-7L6"/>
+                        <outlet property="legalText" destination="lcE-UK-fGG" id="Cj0-yR-zT0"/>
+                        <outlet property="raceChartView" destination="FHr-T5-qCy" id="o2J-nY-8jS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ami-DC-cYg" userLabel="First Responder" sceneMemberID="firstResponder"/>

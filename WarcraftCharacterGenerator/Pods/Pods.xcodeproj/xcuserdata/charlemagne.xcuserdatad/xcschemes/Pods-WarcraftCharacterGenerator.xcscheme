@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3FE52269D7EA1CF8EEF83B7798A39C85"
+               BlueprintIdentifier = "F32DBF21AF70873CFEE87216986FD75C"
                BuildableName = "Pods_WarcraftCharacterGenerator.framework"
                BlueprintName = "Pods-WarcraftCharacterGenerator"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3FE52269D7EA1CF8EEF83B7798A39C85"
+            BlueprintIdentifier = "F32DBF21AF70873CFEE87216986FD75C"
             BuildableName = "Pods_WarcraftCharacterGenerator.framework"
             BlueprintName = "Pods-WarcraftCharacterGenerator"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -8,15 +8,16 @@
 
 import RealmSwift
 
-//class GenerationHistory: Object
-//{
-//    @objc dynamic var id_history: Int = 0
-//    @objc dynamic var faction: WarcraftFaction?
-//    @objc dynamic var race: WarcraftRace?
-//    @objc dynamic var warcraft_class: WarcraftClass?
-//    @objc dynamic var spec: WarcraftClassSpecialization?
-//    
-//    override static func primaryKey() -> String? {
-//        return "id_history"
-//    }
-//}
+class GenerationHistory: Object
+{
+    @objc dynamic var id_history: Int = 0
+    @objc dynamic var faction: WarcraftFaction?
+    @objc dynamic var race: WarcraftRace?
+    @objc dynamic var spec: WarcraftClassSpecialization?
+    @objc dynamic var warcraft_class: WarcraftClass?
+    @objc dynamic var history_datetime: Date = Date()
+    
+    override static func primaryKey() -> String? {
+        return "id_history"
+    }
+}

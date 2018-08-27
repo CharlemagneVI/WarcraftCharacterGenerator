@@ -8,4 +8,6 @@ target 'WarcraftCharacterGenerator' do
   # Pods for WarcraftCharacterGenerator
   pod 'RealmSwift'
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+  pod 'Charts'
+  pod 'ChartsRealm'
 end

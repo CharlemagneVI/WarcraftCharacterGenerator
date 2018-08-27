@@ -1,4 +1,10 @@
 PODS:
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - ChartsRealm (3.1.1):
+    - Charts (~> 3.1.1)
+    - RealmSwift (~> 3.7.1)
   - Realm (3.7.4):
     - Realm/Headers (= 3.7.4)
   - Realm/Headers (3.7.4)
@@ -7,11 +13,15 @@ PODS:
   - Spring (1.0.5)
 
 DEPENDENCIES:
+  - Charts
+  - ChartsRealm
   - RealmSwift
   - Spring (from `https://github.com/MengTo/Spring.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Charts
+    - ChartsRealm
     - Realm
     - RealmSwift
 
@@ -25,10 +35,12 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  ChartsRealm: 35728e98e8d365a45c54fa7a1fa47663d2539887
   Realm: a469bb59e33f9926102ccaea4349822c53b9117e
   RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
   Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
 
-PODFILE CHECKSUM: d49aa38c54b9e53bee6ba65c4115137b35758f38
+PODFILE CHECKSUM: e2819aa1f64efa37a2d2d4d530704d59af0e2c99
 
 COCOAPODS: 1.5.3

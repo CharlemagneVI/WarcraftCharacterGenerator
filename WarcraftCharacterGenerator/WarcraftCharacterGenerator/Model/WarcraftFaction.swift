@@ -12,7 +12,7 @@ class WarcraftFaction: Object
 {
     @objc dynamic var id_faction: Int = 0
     @objc dynamic var faction_name: String = ""
-    let faction_race = List<WarcraftRace>()
+    let faction_races = List<WarcraftRace>()
     @objc dynamic var faction_img: String = ""
     
     override static func primaryKey() -> String? {
