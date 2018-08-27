@@ -10,6 +10,7 @@ import UIKit
 import Spring
 import Charts
 import ChartsRealm
+import RealmSwift
 
 class InfoViewController: UIViewController
 {
@@ -19,12 +20,16 @@ class InfoViewController: UIViewController
     @IBOutlet var imgWcgLogoText: SpringImageView!
     @IBOutlet var legalText: SpringTextView!
     @IBOutlet var raceChartView: PieChartView!
+    @IBOutlet var factionChartView: PieChartView!
+    @IBOutlet var classChartView: PieChartView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        updateRaceChart()
-        updateClassChart()
+        let generationHistory = getPreviousGenerationsFromDatabase()
+        updateRaceChart(previousGenerations: generationHistory)
+        updateClassChart(previousGenerations: generationHistory)
+        updateFactionChart(previousGenerations: generationHistory)
     }
     
     //Override the status bar to white.
@@ -82,22 +87,78 @@ class InfoViewController: UIViewController
         }
     }
     
-    private func updateRaceChart()
+    private func updateRaceChart(previousGenerations: Results<GenerationHistory>)
     {
+        raceChartView.usePercentValuesEnabled = true
+        raceChartView.drawSlicesUnderHoleEnabled = false
+        raceChartView.drawHoleEnabled = false
+        raceChartView.legend.enabled = false
+        raceChartView.rotationEnabled = false
+        raceChartView.chartDescription?.text = ""
+        raceChartView.noDataFont = UIFont(name: "FrizQuadrataStd", size: 12.0)
+        raceChartView.noDataTextColor = NSUIColor(cgColor: UIColor.white.cgColor)
+        
+        
+        
         var dataEntries: [PieChartDataEntry] = []
         dataEntries.append(PieChartDataEntry(value: 2.0, label: "Warrior"))
         dataEntries.append(PieChartDataEntry(value: 3.0, label: "Shaman"))
         
         let chartDataSet = PieChartDataSet(values: dataEntries, label: nil)
         chartDataSet.colors = [UIColor.brown, UIColor.blue]
+        chartDataSet.valueFont = UIFont(name: "FrizQuadrataStd", size: 14.0)!
         
         let pieChartData = PieChartData(dataSet: chartDataSet)
         raceChartView.data = pieChartData
         
     }
     
-    private func updateClassChart()
+    private func updateClassChart(previousGenerations: Results<GenerationHistory>)
     {
+        classChartView.usePercentValuesEnabled = true
+        classChartView.drawSlicesUnderHoleEnabled = false
+        classChartView.drawHoleEnabled = false
+        classChartView.legend.enabled = false
+        classChartView.rotationEnabled = false
+        classChartView.chartDescription?.text = ""
+        classChartView.noDataFont = UIFont(name: "FrizQuadrataStd", size: 12.0)
+        classChartView.noDataTextColor = NSUIColor(cgColor: UIColor.white.cgColor)
         
+    }
+    
+    private func updateFactionChart(previousGenerations: Results<GenerationHistory>)
+    {
+        factionChartView.usePercentValuesEnabled = true
+        factionChartView.drawSlicesUnderHoleEnabled = false
+        factionChartView.drawHoleEnabled = false
+        factionChartView.legend.enabled = false
+        factionChartView.rotationEnabled = false
+        factionChartView.chartDescription?.text = ""
+        factionChartView.noDataFont = UIFont(name: "FrizQuadrataStd", size: 12.0)
+        factionChartView.noDataTextColor = NSUIColor(cgColor: UIColor.white.cgColor)
+        
+    }
+    
+    private func getPreviousGenerationsFromDatabase() -> Results<GenerationHistory>
+    {
+        var newestSchemaVersion: UInt64 = 1
+        do
+        {
+            newestSchemaVersion = try schemaVersionAtURL(URL(string: Bundle.main.path(forResource: "wcg", ofType: "realm")!)!)
+        }
+        catch
+        {
+            print(error.localizedDescription)
+        }
+        
+        do
+        {
+            let realm = try Realm(configuration: Realm.Configuration(fileURL: URL(string: Bundle.main.path(forResource: "wcg", ofType: "realm")!), readOnly: true, schemaVersion: newestSchemaVersion))
+            return realm.objects(GenerationHistory.self)
+        }
+        catch let error as NSError
+        {
+            fatalError(error.localizedDescription)
+        }
     }
 }

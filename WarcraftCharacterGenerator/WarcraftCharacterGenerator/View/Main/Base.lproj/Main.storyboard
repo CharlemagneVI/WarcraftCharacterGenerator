@@ -147,7 +147,7 @@
                                 </connections>
                             </button>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-UK-fGG" customClass="SpringTextView" customModule="Spring">
-                                <rect key="frame" x="67" y="169" width="240" height="251"/>
+                                <rect key="frame" x="67" y="139" width="240" height="251"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">DISCLAIMER: Warcraft Character Generator is in no way affiliated with Blizzard Entertainment. All images and fonts are copyrighted by Blizzard Entertainment and fall within the realm of fair use.</string>
@@ -167,24 +167,59 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP5-Js-C2H">
-                                <rect key="frame" x="140" y="446" width="94" height="25"/>
+                                <rect key="frame" x="140" y="408" width="94" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kc7-p6-Uyu" customClass="SpringImageView" customModule="Spring">
-                                <rect key="frame" x="107" y="169" width="161" height="161"/>
+                                <rect key="frame" x="107" y="139" width="161" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="3aC-QW-6vX" customClass="SpringImageView" customModule="Spring">
-                                <rect key="frame" x="43" y="338" width="288" height="73"/>
+                                <rect key="frame" x="43" y="308" width="288" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-T5-qCy" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="26" y="508" width="196" height="178"/>
+                                <rect key="frame" x="13" y="613" width="170" height="154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epk-8O-dIx" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="189" y="613" width="170" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Race" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEM-6x-XFM">
+                                <rect key="frame" x="81" y="588" width="34" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwo-Yt-DcZ">
+                                <rect key="frame" x="256" y="588" width="37" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Faction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-IO-2NK">
+                                <rect key="frame" x="161" y="453" width="52" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info-separator" translatesAutoresizingMaskIntoConstraints="NO" id="mzI-dP-ijA">
+                                <rect key="frame" x="33" y="392" width="316" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-kR-Sbf" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="121" y="468" width="132" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -192,6 +227,8 @@
                     </view>
                     <connections>
                         <outlet property="btnCloseInfo" destination="EOJ-GO-Li4" id="2NR-61-fcF"/>
+                        <outlet property="classChartView" destination="epk-8O-dIx" id="PmJ-33-AoA"/>
+                        <outlet property="factionChartView" destination="rS3-kR-Sbf" id="vb7-Wf-a2p"/>
                         <outlet property="imgWcgLogo" destination="Kc7-p6-Uyu" id="ucN-9f-AMV"/>
                         <outlet property="imgWcgLogoText" destination="3aC-QW-6vX" id="SR2-da-32U"/>
                         <outlet property="legalButton" destination="vn0-JN-2MK" id="zYU-Hd-lJ9"/>
@@ -215,6 +252,7 @@
         <image name="btn-okay-sm" width="502" height="100"/>
         <image name="close-icon" width="42" height="44"/>
         <image name="glyph-info" width="50" height="50"/>
+        <image name="info-separator" width="632" height="4"/>
         <image name="intro-view" width="660" height="646"/>
     </resources>
 </document>

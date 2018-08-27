@@ -59,6 +59,10 @@ class GeneratorViewController: UIViewController
             btnIntro.animate()
             firstOpen = true
         }
+        else
+        {
+            resumeBackground(layer: imgBackground.layer)
+        }
     }
     
     //Override the status bar to white.
@@ -120,6 +124,20 @@ class GeneratorViewController: UIViewController
         layer.beginTime = timeSincePause
     }
     
+    private func generateShadowView(cardView: UIView) -> UIView
+    {
+        let shadowView: UIView = UIView()
+        
+        shadowView.frame = cardView.frame
+        shadowView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        shadowView.layer.shadowColor = (UIColor(hex: "#1B1919").cgColor)
+        shadowView.layer.shadowOpacity = 0.50
+        shadowView.layer.shadowRadius = 10
+        shadowView.layer.masksToBounds = false
+        
+        return shadowView
+    }
+    
     @IBAction func btnGenerateTouch(_ sender: SpringButton)
     {
         btnGenerate.animation = "fadeOut"
@@ -146,6 +164,9 @@ class GeneratorViewController: UIViewController
         let characterCardView = UIView.fromNib(name: "CharacterCard") as! CharacterCard
         characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
         characterCardView.center = view.convert(view.center, from: view.superview)
+        
+        let shadowView = generateShadowView(cardView: characterCardView)
+        characterCardView.addSubview(shadowView)
         
         //characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
         view.addSubview(characterCardView)
@@ -210,6 +231,9 @@ class GeneratorViewController: UIViewController
         let characterCardView = UIView.fromNib(name: "CharacterCard") as! CharacterCard
         characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
         characterCardView.center = view.convert(view.center, from: view.superview)
+        
+        let shadowView = generateShadowView(cardView: characterCardView)
+        characterCardView.addSubview(shadowView)
         
         //characterCardView.populateCharacterCard(warcraftCharacter: warcraftCharacter)
         view.addSubview(characterCardView)
