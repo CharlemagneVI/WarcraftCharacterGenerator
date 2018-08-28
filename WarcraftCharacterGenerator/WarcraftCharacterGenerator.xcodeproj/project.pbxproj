@@ -16,12 +16,12 @@
 		663410D82122F31E00695516 /* AVAudioPlayer+Norfare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */; };
 		66799198212EE0510069A744 /* UIView+Norfare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66799197212EE0510069A744 /* UIView+Norfare.swift */; };
 		6692A37C212ADA9100FE950A /* WarcraftCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692A37B212ADA9100FE950A /* WarcraftCharacter.swift */; };
+		66972330213560EB0061709D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6697232F213560EB0061709D /* Assets.xcassets */; };
 		66A36047212590D70082C766 /* WarcraftCharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A36046212590D70082C766 /* WarcraftCharacterGenerator.swift */; };
 		66A3604A212591FA0082C766 /* WarcraftRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A36049212591FA0082C766 /* WarcraftRace.swift */; };
 		66A3604C212599AF0082C766 /* WarcraftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3604B212599AF0082C766 /* WarcraftClass.swift */; };
 		66A360502125A1B00082C766 /* wcg.realm in Resources */ = {isa = PBXBuildFile; fileRef = 66A3604F2125A1B00082C766 /* wcg.realm */; };
 		66C1C7DB21302CBC00F791A2 /* CharacterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1C7DA21302CBC00F791A2 /* CharacterCard.swift */; };
-		66C1C7DD213032D500F791A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C1C7DC213032D500F791A2 /* Assets.xcassets */; };
 		66C7396B2121A62B00B710C7 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7396A2121A62B00B710C7 /* GeneratorViewController.swift */; };
 		66D3ABE52126E85E00EF152A /* WarcraftFaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */; };
 		66D3ABE72126F08C00EF152A /* WarcraftClassSpecialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */; };
@@ -45,12 +45,12 @@
 		663410D72122F31E00695516 /* AVAudioPlayer+Norfare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPlayer+Norfare.swift"; sourceTree = "<group>"; };
 		66799197212EE0510069A744 /* UIView+Norfare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Norfare.swift"; sourceTree = "<group>"; };
 		6692A37B212ADA9100FE950A /* WarcraftCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftCharacter.swift; sourceTree = "<group>"; };
+		6697232F213560EB0061709D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66A36046212590D70082C766 /* WarcraftCharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftCharacterGenerator.swift; sourceTree = "<group>"; };
 		66A36049212591FA0082C766 /* WarcraftRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftRace.swift; sourceTree = "<group>"; };
 		66A3604B212599AF0082C766 /* WarcraftClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftClass.swift; sourceTree = "<group>"; };
 		66A3604F2125A1B00082C766 /* wcg.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = wcg.realm; sourceTree = "<group>"; };
 		66C1C7DA21302CBC00F791A2 /* CharacterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCard.swift; sourceTree = "<group>"; };
-		66C1C7DC213032D500F791A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Desktop/Assets.xcassets; sourceTree = "<group>"; };
 		66C7396A2121A62B00B710C7 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 		66D3ABE42126E85E00EF152A /* WarcraftFaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftFaction.swift; sourceTree = "<group>"; };
 		66D3ABE62126F08C00EF152A /* WarcraftClassSpecialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarcraftClassSpecialization.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				66A36048212591DB0082C766 /* Model */,
 				66C739682121A5A200B710C7 /* View */,
 				662E3D0F21219FF60013CA64 /* LaunchScreen.storyboard */,
-				66C1C7DC213032D500F791A2 /* Assets.xcassets */,
+				6697232F213560EB0061709D /* Assets.xcassets */,
 				662E3D1221219FF60013CA64 /* Info.plist */,
 			);
 			path = WarcraftCharacterGenerator;
@@ -285,7 +285,7 @@
 				66DC57562132D856009FC4C0 /* LifeCraft_Font.ttf in Resources */,
 				662E3D0C21219FF50013CA64 /* Main.storyboard in Resources */,
 				66DC57572132D856009FC4C0 /* Friz Quadrata Std Medium.otf in Resources */,
-				66C1C7DD213032D500F791A2 /* Assets.xcassets in Resources */,
+				66972330213560EB0061709D /* Assets.xcassets in Resources */,
 				66262119212ECC0300F86531 /* CharacterCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

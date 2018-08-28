@@ -14,10 +14,10 @@ class WarcraftCharacterGenerator
     
     init()
     {
-        var newestSchemaVersion: UInt64 = 29
+        var newestSchemaVersion: UInt64 = 24
         do
         {
-            newestSchemaVersion = try schemaVersionAtURL(URL(string: Bundle.main.path(forResource: "wcg", ofType: "realm")!)!)
+            newestSchemaVersion = try schemaVersionAtURL(Bundle.main.url(forResource: "wcg", withExtension: "realm")!)
         }
         catch
         {
@@ -25,7 +25,7 @@ class WarcraftCharacterGenerator
         }
        
         self.config = Realm.Configuration(
-            fileURL: URL(string: Bundle.main.path(forResource: "wcg", ofType: "realm")!), readOnly: false, schemaVersion: newestSchemaVersion,
+            fileURL: Bundle.main.url(forResource: "wcg", withExtension: "realm"), readOnly: false, schemaVersion: newestSchemaVersion,
             migrationBlock: { migration, oldSchemaVersion in
                 if(oldSchemaVersion < newestSchemaVersion) {
                     // Nothing to do!

@@ -14,6 +14,7 @@ class WarcraftFaction: Object
     @objc dynamic var faction_name: String = ""
     let faction_races = List<WarcraftRace>()
     @objc dynamic var faction_img: String = ""
+    @objc dynamic var chart_color: String = ""
     
     override static func primaryKey() -> String? {
         return "id_faction"

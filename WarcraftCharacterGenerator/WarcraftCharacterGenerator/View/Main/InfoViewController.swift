@@ -45,7 +45,6 @@ class InfoViewController: UIViewController
     
     @IBAction func showLegal(_ sender: Any)
     {
-        print(legalText.isHidden)
         if(legalText.isHidden)
         {
             legalText.animation = "fadeIn"
@@ -87,8 +86,30 @@ class InfoViewController: UIViewController
         }
     }
     
+/* TODO: Refactor piechart generation functions to standardize a bit now that they are more similar. I would do it right now but I've already spent too much time on this app don't @ me*/
+    
     private func updateRaceChart(previousGenerations: Results<GenerationHistory>)
     {
+        var dataEntries: [PieChartDataEntry] = []
+        
+        let allRaces = getRacesFromDB()
+        
+        for race in allRaces
+        {
+            var raceCount: Double = 0
+            for generation in previousGenerations
+            {
+                if(generation.race?.race_name == race.race_name)
+                {
+                    raceCount = raceCount + 1
+                }
+            }
+            if(raceCount > 0)
+            {
+                dataEntries.append(PieChartDataEntry(value: raceCount, label: race.race_name))
+            }
+        }
+        
         raceChartView.usePercentValuesEnabled = true
         raceChartView.drawSlicesUnderHoleEnabled = false
         raceChartView.drawHoleEnabled = false
@@ -98,23 +119,41 @@ class InfoViewController: UIViewController
         raceChartView.noDataFont = UIFont(name: "FrizQuadrataStd", size: 12.0)
         raceChartView.noDataTextColor = NSUIColor(cgColor: UIColor.white.cgColor)
         
-        
-        
-        var dataEntries: [PieChartDataEntry] = []
-        dataEntries.append(PieChartDataEntry(value: 2.0, label: "Warrior"))
-        dataEntries.append(PieChartDataEntry(value: 3.0, label: "Shaman"))
-        
-        let chartDataSet = PieChartDataSet(values: dataEntries, label: nil)
-        chartDataSet.colors = [UIColor.brown, UIColor.blue]
-        chartDataSet.valueFont = UIFont(name: "FrizQuadrataStd", size: 14.0)!
-        
-        let pieChartData = PieChartData(dataSet: chartDataSet)
-        raceChartView.data = pieChartData
-        
+        if(dataEntries.count > 0)
+        {
+            let chartDataSet = PieChartDataSet(values: dataEntries, label: nil)
+            chartDataSet.colors = ChartColorTemplates.pastel()
+            chartDataSet.valueFont = UIFont(name: "FrizQuadrataStd", size: 14.0)!
+            
+            let pieChartData = PieChartData(dataSet: chartDataSet)
+            raceChartView.data = pieChartData
+        }
     }
     
     private func updateClassChart(previousGenerations: Results<GenerationHistory>)
     {
+        var dataEntries: [PieChartDataEntry] = []
+        var dataSetColors: [UIColor] = []
+        
+        let classes = getClassesFromDB()
+        
+        for wc_class in classes
+        {
+            var classCount: Double = 0
+            for generation in previousGenerations
+            {
+                if(generation.warcraft_class?.class_name == wc_class.class_name)
+                {
+                    classCount = classCount + 1
+                }
+            }
+            if(classCount > 0)
+            {
+                dataSetColors.append(UIColor.init(hex: wc_class.chart_color))
+                dataEntries.append(PieChartDataEntry(value: classCount, label: wc_class.class_name))
+            }
+        }
+        
         classChartView.usePercentValuesEnabled = true
         classChartView.drawSlicesUnderHoleEnabled = false
         classChartView.drawHoleEnabled = false
@@ -124,10 +163,42 @@ class InfoViewController: UIViewController
         classChartView.noDataFont = UIFont(name: "FrizQuadrataStd", size: 12.0)
         classChartView.noDataTextColor = NSUIColor(cgColor: UIColor.white.cgColor)
         
+        if(dataEntries.count > 0)
+        {
+            let chartDataSet = PieChartDataSet(values: dataEntries, label: nil)
+            chartDataSet.colors = dataSetColors
+            chartDataSet.valueFont = UIFont(name: "FrizQuadrataStd", size: 14.0)!
+            
+            let pieChartData = PieChartData(dataSet: chartDataSet)
+            classChartView.data = pieChartData
+        }
+        
     }
     
     private func updateFactionChart(previousGenerations: Results<GenerationHistory>)
     {
+        var dataEntries: [PieChartDataEntry] = []
+        var dataSetColors: [UIColor] = []
+        
+        let factions = getFactionsFromDB()
+        
+        for fact in factions
+        {
+            var factionCount: Double = 0
+            for generation in previousGenerations
+            {
+                if(generation.faction?.faction_name == fact.faction_name)
+                {
+                    factionCount = factionCount + 1
+                }
+            }
+            if(factionCount > 0)
+            {
+                dataSetColors.append(UIColor.init(hex: fact.chart_color))
+                dataEntries.append(PieChartDataEntry(value: factionCount, label: fact.faction_name))
+            }
+        }
+        
         factionChartView.usePercentValuesEnabled = true
         factionChartView.drawSlicesUnderHoleEnabled = false
         factionChartView.drawHoleEnabled = false
@@ -137,11 +208,91 @@ class InfoViewController: UIViewController
         factionChartView.noDataFont = UIFont(name: "FrizQuadrataStd", size: 12.0)
         factionChartView.noDataTextColor = NSUIColor(cgColor: UIColor.white.cgColor)
         
+        if(dataEntries.count > 0)
+        {
+            let chartDataSet = PieChartDataSet(values: dataEntries, label: nil)
+            chartDataSet.colors = dataSetColors
+            chartDataSet.valueFont = UIFont(name: "FrizQuadrataStd", size: 14.0)!
+            
+            let pieChartData = PieChartData(dataSet: chartDataSet)
+            factionChartView.data = pieChartData
+        }
     }
+    
+/* TODO: Use generics for these realm calls, maybe separate into another class as well */
     
     private func getPreviousGenerationsFromDatabase() -> Results<GenerationHistory>
     {
-        var newestSchemaVersion: UInt64 = 1
+        var newestSchemaVersion: UInt64 = 24
+        do
+        {
+            newestSchemaVersion = try schemaVersionAtURL(Bundle.main.url(forResource: "wcg", withExtension: "realm")!)
+        }
+        catch
+        {
+            print(error.localizedDescription)
+        }
+        
+        do
+        {
+            let realm = try Realm(configuration: Realm.Configuration(fileURL: Bundle.main.url(forResource: "wcg", withExtension: "realm")!, readOnly: true, schemaVersion: newestSchemaVersion))
+            return realm.objects(GenerationHistory.self)
+        }
+        catch let error as NSError
+        {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    private func getFactionsFromDB() -> Results<WarcraftFaction>
+    {
+        var newestSchemaVersion: UInt64 = 24
+        do
+        {
+            newestSchemaVersion = try schemaVersionAtURL(Bundle.main.url(forResource: "wcg", withExtension: "realm")!)
+        }
+        catch
+        {
+            print(error.localizedDescription)
+        }
+        
+        do
+        {
+            let realm = try Realm(configuration: Realm.Configuration(fileURL: Bundle.main.url(forResource: "wcg", withExtension: "realm")!, readOnly: true, schemaVersion: newestSchemaVersion))
+            return realm.objects(WarcraftFaction.self)
+        }
+        catch let error as NSError
+        {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    private func getClassesFromDB() -> Results<WarcraftClass>
+    {
+        var newestSchemaVersion: UInt64 = 24
+        do
+        {
+            newestSchemaVersion = try schemaVersionAtURL(Bundle.main.url(forResource: "wcg", withExtension: "realm")!)
+        }
+        catch
+        {
+            print(error.localizedDescription)
+        }
+        
+        do
+        {
+            let realm = try Realm(configuration: Realm.Configuration(fileURL: Bundle.main.url(forResource: "wcg", withExtension: "realm")!, readOnly: true, schemaVersion: newestSchemaVersion))
+            return realm.objects(WarcraftClass.self)
+        }
+        catch let error as NSError
+        {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    private func getRacesFromDB() -> Results<WarcraftRace>
+    {
+        var newestSchemaVersion: UInt64 = 24
         do
         {
             newestSchemaVersion = try schemaVersionAtURL(URL(string: Bundle.main.path(forResource: "wcg", ofType: "realm")!)!)
@@ -154,7 +305,7 @@ class InfoViewController: UIViewController
         do
         {
             let realm = try Realm(configuration: Realm.Configuration(fileURL: URL(string: Bundle.main.path(forResource: "wcg", ofType: "realm")!), readOnly: true, schemaVersion: newestSchemaVersion))
-            return realm.objects(GenerationHistory.self)
+            return realm.objects(WarcraftRace.self)
         }
         catch let error as NSError
         {
