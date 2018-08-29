@@ -14,10 +14,24 @@ class WarcraftCharacterGenerator
     
     init()
     {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
+        let filePath = documentsDirectory.appendingPathComponent("wcg.realm")
+        let bundleRealmPath = Bundle.main.path(forResource: "wcg", ofType: "realm")
+        
+        //If the realm file doesn't exist, write a copy
+        if(!FileManager.default.fileExists(atPath: filePath.absoluteString))
+        {
+            do {
+                try FileManager.default.copyItem(atPath: bundleRealmPath!, toPath: filePath.path)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
         var newestSchemaVersion: UInt64 = 24
         do
         {
-            newestSchemaVersion = try schemaVersionAtURL(Bundle.main.url(forResource: "wcg", withExtension: "realm")!)
+            newestSchemaVersion = try schemaVersionAtURL(filePath)
         }
         catch
         {
@@ -25,7 +39,7 @@ class WarcraftCharacterGenerator
         }
        
         self.config = Realm.Configuration(
-            fileURL: Bundle.main.url(forResource: "wcg", withExtension: "realm"), readOnly: false, schemaVersion: newestSchemaVersion,
+            fileURL: filePath, readOnly: false, schemaVersion: newestSchemaVersion,
             migrationBlock: { migration, oldSchemaVersion in
                 if(oldSchemaVersion < newestSchemaVersion) {
                     // Nothing to do!
@@ -43,6 +57,8 @@ class WarcraftCharacterGenerator
         //Generate a number for faction
         var randomGen = Int.random(in: 1 ... 2)
         let faction = realm.object(ofType: WarcraftFaction.self, forPrimaryKey: randomGen)
+        
+        print(faction?.faction_races.count)
         
         //Generate a number for race
         randomGen = Int.random(in: 0 ... (faction?.faction_races.count)! - 1)

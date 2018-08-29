@@ -181,6 +181,8 @@ class GeneratorViewController: UIViewController
         btnGenerateSmall.curve = "easeIn"
         btnGenerateSmall.duration = 2.5
         btnGenerateSmall.animate()
+        
+        audioPlayer.playSound(soundName: "warcraft-level-up", soundExtension: "mp3")
     }
     
     @IBAction func btnIntroConfirmTouch(_ sender: Any)
@@ -242,6 +244,8 @@ class GeneratorViewController: UIViewController
         characterCardView.duration = 1.0
         characterCardView.animate()
         currentCharacterCard = characterCardView
+       
+        audioPlayer.playSound(soundName: "warcraft-level-up", soundExtension: "mp3")
     }
     
     @IBAction func infoTouchOpen(_ sender: Any)

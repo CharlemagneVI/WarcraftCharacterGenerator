@@ -23,6 +23,8 @@ class InfoViewController: UIViewController
     @IBOutlet var factionChartView: PieChartView!
     @IBOutlet var classChartView: PieChartView!
     
+    let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("wcg.realm")
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -226,7 +228,7 @@ class InfoViewController: UIViewController
         var newestSchemaVersion: UInt64 = 24
         do
         {
-            newestSchemaVersion = try schemaVersionAtURL(Bundle.main.url(forResource: "wcg", withExtension: "realm")!)
+            newestSchemaVersion = try schemaVersionAtURL(filePath)
         }
         catch
         {
@@ -235,7 +237,7 @@ class InfoViewController: UIViewController
         
         do
         {
-            let realm = try Realm(configuration: Realm.Configuration(fileURL: Bundle.main.url(forResource: "wcg", withExtension: "realm")!, readOnly: true, schemaVersion: newestSchemaVersion))
+            let realm = try Realm(configuration: Realm.Configuration(fileURL: filePath, readOnly: true, schemaVersion: newestSchemaVersion))
             return realm.objects(GenerationHistory.self)
         }
         catch let error as NSError
@@ -249,7 +251,7 @@ class InfoViewController: UIViewController
         var newestSchemaVersion: UInt64 = 24
         do
         {
-            newestSchemaVersion = try schemaVersionAtURL(Bundle.main.url(forResource: "wcg", withExtension: "realm")!)
+            newestSchemaVersion = try schemaVersionAtURL(filePath)
         }
         catch
         {
@@ -258,7 +260,7 @@ class InfoViewController: UIViewController
         
         do
         {
-            let realm = try Realm(configuration: Realm.Configuration(fileURL: Bundle.main.url(forResource: "wcg", withExtension: "realm")!, readOnly: true, schemaVersion: newestSchemaVersion))
+            let realm = try Realm(configuration: Realm.Configuration(fileURL: filePath, readOnly: true, schemaVersion: newestSchemaVersion))
             return realm.objects(WarcraftFaction.self)
         }
         catch let error as NSError
@@ -272,7 +274,7 @@ class InfoViewController: UIViewController
         var newestSchemaVersion: UInt64 = 24
         do
         {
-            newestSchemaVersion = try schemaVersionAtURL(Bundle.main.url(forResource: "wcg", withExtension: "realm")!)
+            newestSchemaVersion = try schemaVersionAtURL(filePath)
         }
         catch
         {
@@ -281,7 +283,7 @@ class InfoViewController: UIViewController
         
         do
         {
-            let realm = try Realm(configuration: Realm.Configuration(fileURL: Bundle.main.url(forResource: "wcg", withExtension: "realm")!, readOnly: true, schemaVersion: newestSchemaVersion))
+            let realm = try Realm(configuration: Realm.Configuration(fileURL: filePath, readOnly: true, schemaVersion: newestSchemaVersion))
             return realm.objects(WarcraftClass.self)
         }
         catch let error as NSError
@@ -295,7 +297,7 @@ class InfoViewController: UIViewController
         var newestSchemaVersion: UInt64 = 24
         do
         {
-            newestSchemaVersion = try schemaVersionAtURL(URL(string: Bundle.main.path(forResource: "wcg", ofType: "realm")!)!)
+            newestSchemaVersion = try schemaVersionAtURL(filePath)
         }
         catch
         {
@@ -304,7 +306,7 @@ class InfoViewController: UIViewController
         
         do
         {
-            let realm = try Realm(configuration: Realm.Configuration(fileURL: URL(string: Bundle.main.path(forResource: "wcg", ofType: "realm")!), readOnly: true, schemaVersion: newestSchemaVersion))
+            let realm = try Realm(configuration: Realm.Configuration(fileURL: filePath, readOnly: true, schemaVersion: newestSchemaVersion))
             return realm.objects(WarcraftRace.self)
         }
         catch let error as NSError

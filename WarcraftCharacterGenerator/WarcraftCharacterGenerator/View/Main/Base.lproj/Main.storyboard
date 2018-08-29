@@ -23,19 +23,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JQi-IY-djj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JQi-IY-djj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zc6-k4-84A" customClass="SpringImageView" customModule="Spring">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zc6-k4-84A" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="107" y="216" width="161" height="161"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="DKQ-Rj-0Jx" customClass="SpringImageView" customModule="Spring">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="DKQ-Rj-0Jx" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="14" y="398" width="347" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="1fP-OH-GKN"/>
+                                </constraints>
                             </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="zc6-k4-84A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="103-pu-lnK"/>
+                            <constraint firstItem="zc6-k4-84A" firstAttribute="centerX" secondItem="DKQ-Rj-0Jx" secondAttribute="centerX" id="Fbc-aS-3t0"/>
+                            <constraint firstItem="zc6-k4-84A" firstAttribute="centerX" secondItem="JQi-IY-djj" secondAttribute="centerX" id="N77-6K-KQV"/>
+                            <constraint firstItem="DKQ-Rj-0Jx" firstAttribute="top" secondItem="zc6-k4-84A" secondAttribute="bottom" constant="21" id="aQ1-YY-6nv"/>
+                            <constraint firstItem="zc6-k4-84A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="cJt-6r-5le"/>
+                            <constraint firstItem="DKQ-Rj-0Jx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="gql-NS-Tfs"/>
+                            <constraint firstItem="zc6-k4-84A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hVK-UD-wn3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DKQ-Rj-0Jx" secondAttribute="bottom" constant="291" id="xnF-95-vg2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -68,21 +78,21 @@
                                     <segue destination="G8V-6l-PHc" kind="show" id="1s8-9c-Dmu"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-vl-F1q" customClass="SpringButton" customModule="Spring">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-vl-F1q" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="57" y="525" width="262" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-generate-lg"/>
                                 <connections>
                                     <action selector="btnGenerateTouch:" destination="Row-vs-ecA" eventType="touchUpInside" id="5OK-M2-JDZ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="intro-view" translatesAutoresizingMaskIntoConstraints="NO" id="KfK-wa-rOx" customClass="SpringImageView" customModule="Spring">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="intro-view" translatesAutoresizingMaskIntoConstraints="NO" id="KfK-wa-rOx" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="23" y="221" width="330" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="2XL-Nt-0GZ"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTV-GL-KLT" customClass="SpringButton" customModule="Spring">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTV-GL-KLT" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="67" y="442" width="251" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-okay-sm"/>
                                 <connections>
                                     <action selector="btnIntroConfirmTouch:" destination="Row-vs-ecA" eventType="touchUpInside" id="GzX-qt-JNg"/>
@@ -92,17 +102,23 @@
                                 <rect key="frame" x="16" y="65" width="266" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8bG-Od-mEY" customClass="SpringImageView" customModule="Spring">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8bG-Od-mEY" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="107" y="206" width="161" height="161"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="AW6-xx-3NF"/>
+                                </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="H1j-4C-b7P" customClass="SpringImageView" customModule="Spring">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="H1j-4C-b7P" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="14" y="393" width="347" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="onA-yR-i0E"/>
+                                </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-uG-BcC" customClass="SpringButton" customModule="Spring">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-uG-BcC" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="71" y="673" width="234" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Akf-yk-2JH"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="btn-generate-sm"/>
                                 <connections>
                                     <action selector="btnGenerateSmallTouch:" destination="Row-vs-ecA" eventType="touchDown" id="nXB-mg-cgr"/>
@@ -110,6 +126,27 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42844069004058838" green="0.39302700757980347" blue="0.33005142211914062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8bG-Od-mEY" firstAttribute="centerX" secondItem="H1j-4C-b7P" secondAttribute="centerX" id="0kN-OH-aAE"/>
+                            <constraint firstItem="KfK-wa-rOx" firstAttribute="centerX" secondItem="Cfh-vl-F1q" secondAttribute="centerX" id="5hh-k3-R3O"/>
+                            <constraint firstItem="H1j-4C-b7P" firstAttribute="leading" secondItem="LQw-HM-Ldb" secondAttribute="leading" constant="14" id="Aa2-oB-JXS"/>
+                            <constraint firstItem="KfK-wa-rOx" firstAttribute="centerX" secondItem="Bbi-uG-BcC" secondAttribute="centerX" id="BYU-0c-f9S"/>
+                            <constraint firstItem="KfK-wa-rOx" firstAttribute="centerX" secondItem="i3i-3j-oqU" secondAttribute="centerX" id="Gsf-o4-2CA"/>
+                            <constraint firstItem="H1j-4C-b7P" firstAttribute="top" secondItem="8bG-Od-mEY" secondAttribute="bottom" constant="26" id="HIf-WW-P60"/>
+                            <constraint firstItem="H1j-4C-b7P" firstAttribute="centerX" secondItem="Cfh-vl-F1q" secondAttribute="centerX" id="IZb-0W-jAL"/>
+                            <constraint firstItem="Bbi-uG-BcC" firstAttribute="leading" secondItem="LQw-HM-Ldb" secondAttribute="leading" constant="71" id="KfF-35-9cd"/>
+                            <constraint firstItem="tTV-GL-KLT" firstAttribute="top" secondItem="8bG-Od-mEY" secondAttribute="bottom" constant="75" id="KkU-ac-thK"/>
+                            <constraint firstItem="8bG-Od-mEY" firstAttribute="leading" secondItem="LQw-HM-Ldb" secondAttribute="leading" constant="107" id="Ool-tZ-jiC"/>
+                            <constraint firstItem="Bbi-uG-BcC" firstAttribute="top" secondItem="Cfh-vl-F1q" secondAttribute="bottom" constant="64" id="XoU-g6-r8N"/>
+                            <constraint firstItem="LQw-HM-Ldb" firstAttribute="bottom" secondItem="Bbi-uG-BcC" secondAttribute="bottom" constant="67" id="dss-uS-UYJ"/>
+                            <constraint firstItem="Cfh-vl-F1q" firstAttribute="top" secondItem="tTV-GL-KLT" secondAttribute="bottom" constant="33" id="fGe-37-He2"/>
+                            <constraint firstItem="KfK-wa-rOx" firstAttribute="leading" secondItem="LQw-HM-Ldb" secondAttribute="leading" constant="23" id="kTx-Vl-n9x"/>
+                            <constraint firstItem="Cfh-vl-F1q" firstAttribute="top" secondItem="H1j-4C-b7P" secondAttribute="bottom" constant="43" id="mfS-3l-IGn"/>
+                            <constraint firstItem="LQw-HM-Ldb" firstAttribute="trailing" secondItem="tTV-GL-KLT" secondAttribute="trailing" constant="57" id="nUx-nw-FCR"/>
+                            <constraint firstItem="KfK-wa-rOx" firstAttribute="top" secondItem="i3i-3j-oqU" secondAttribute="top" constant="221" id="sVi-9F-mWS"/>
+                            <constraint firstItem="tTV-GL-KLT" firstAttribute="leading" secondItem="LQw-HM-Ldb" secondAttribute="leading" constant="67" id="yw1-Jw-gka"/>
+                            <constraint firstAttribute="bottom" secondItem="tTV-GL-KLT" secondAttribute="bottom" constant="320" id="zBd-A8-O5u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LQw-HM-Ldb"/>
                     </view>
                     <connections>
@@ -134,30 +171,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="iON-UI-qYz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="iON-UI-qYz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOJ-GO-Li4">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOJ-GO-Li4">
                                 <rect key="frame" x="37" y="71" width="17" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="close-icon"/>
                                 <connections>
                                     <action selector="CloseInfo:" destination="G8V-6l-PHc" eventType="touchUpInside" id="nzs-aa-C5a"/>
                                 </connections>
                             </button>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-UK-fGG" customClass="SpringTextView" customModule="Spring">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-UK-fGG" customClass="SpringTextView" customModule="Spring">
                                 <rect key="frame" x="67" y="139" width="240" height="251"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">DISCLAIMER: Warcraft Character Generator is in no way affiliated with Blizzard Entertainment. All images and fonts are copyrighted by Blizzard Entertainment and fall within the realm of fair use.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-JN-2MK">
-                                <rect key="frame" x="251" y="66" width="101" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-JN-2MK">
+                                <rect key="frame" x="251" y="66" width="101" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="7mM-BD-eVY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="17"/>
                                 <state key="normal" title="Legal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -166,63 +202,102 @@
                                     <action selector="showLegal:" destination="G8V-6l-PHc" eventType="touchUpInside" id="kY2-i9-el4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP5-Js-C2H">
-                                <rect key="frame" x="140" y="408" width="94" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP5-Js-C2H">
+                                <rect key="frame" x="136" y="400.66666666666669" width="103" height="29.333333333333314"/>
                                 <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kc7-p6-Uyu" customClass="SpringImageView" customModule="Spring">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WCGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kc7-p6-Uyu" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="107" y="139" width="161" height="161"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="Lmw-op-YZb"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="3aC-QW-6vX" customClass="SpringImageView" customModule="Spring">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="WCGLogo-Text" translatesAutoresizingMaskIntoConstraints="NO" id="3aC-QW-6vX" customClass="SpringImageView" customModule="Spring">
                                 <rect key="frame" x="43" y="308" width="288" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="7h4-XR-BzA"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-T5-qCy" customClass="PieChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHr-T5-qCy" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="16" y="619" width="171" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwo-Yt-DcZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwo-Yt-DcZ">
                                 <rect key="frame" x="255" y="603" width="37" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Faction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-IO-2NK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Faction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-IO-2NK">
                                 <rect key="frame" x="161" y="453" width="52" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info-separator" translatesAutoresizingMaskIntoConstraints="NO" id="mzI-dP-ijA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="info-separator" translatesAutoresizingMaskIntoConstraints="NO" id="mzI-dP-ijA">
                                 <rect key="frame" x="33" y="392" width="316" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-kR-Sbf" customClass="PieChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-kR-Sbf" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="108" y="474" width="158" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epk-8O-dIx" customClass="PieChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epk-8O-dIx" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="188" y="619" width="171" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Race" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEM-6x-XFM">
-                                <rect key="frame" x="84" y="602" width="34" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEM-6x-XFM">
+                                <rect key="frame" x="84" y="599" width="34" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="XT5-g9-ZZe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="FrizQuadrataStd" family="Friz Quadrata Std" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ogz-IO-2NK" firstAttribute="top" secondItem="LP5-Js-C2H" secondAttribute="bottom" constant="20" id="30e-ul-hkP"/>
+                            <constraint firstItem="rS3-kR-Sbf" firstAttribute="top" secondItem="ogz-IO-2NK" secondAttribute="bottom" constant="4" id="3r2-x1-hTI"/>
+                            <constraint firstItem="lVK-7Q-kDe" firstAttribute="bottom" secondItem="FHr-T5-qCy" secondAttribute="bottom" constant="11" id="4dH-WU-r4D"/>
+                            <constraint firstItem="3aC-QW-6vX" firstAttribute="top" secondItem="Kc7-p6-Uyu" secondAttribute="bottom" constant="8" symbolic="YES" id="6eT-qn-nYc"/>
+                            <constraint firstItem="3aC-QW-6vX" firstAttribute="leading" secondItem="lVK-7Q-kDe" secondAttribute="leading" constant="43" id="7MR-om-x5F"/>
+                            <constraint firstItem="3aC-QW-6vX" firstAttribute="centerX" secondItem="lcE-UK-fGG" secondAttribute="centerX" id="87g-0N-Cmj"/>
+                            <constraint firstItem="rS3-kR-Sbf" firstAttribute="top" secondItem="XFa-fI-LxE" secondAttribute="top" constant="474" id="9p0-qF-UHg"/>
+                            <constraint firstItem="ogz-IO-2NK" firstAttribute="leading" secondItem="lVK-7Q-kDe" secondAttribute="leading" constant="161" id="Ad5-7K-piB"/>
+                            <constraint firstItem="XEM-6x-XFM" firstAttribute="top" secondItem="rS3-kR-Sbf" secondAttribute="bottom" constant="6" id="BJq-pP-MUL"/>
+                            <constraint firstItem="vn0-JN-2MK" firstAttribute="centerY" secondItem="EOJ-GO-Li4" secondAttribute="centerY" id="DPz-U6-ENY"/>
+                            <constraint firstItem="epk-8O-dIx" firstAttribute="top" secondItem="rS3-kR-Sbf" secondAttribute="bottom" constant="23" id="EBv-mc-n8k"/>
+                            <constraint firstItem="lVK-7Q-kDe" firstAttribute="trailing" secondItem="vn0-JN-2MK" secondAttribute="trailing" constant="23" id="GJL-qt-GGz"/>
+                            <constraint firstItem="FHr-T5-qCy" firstAttribute="leading" secondItem="XFa-fI-LxE" secondAttribute="leadingMargin" id="GUf-w1-ElT"/>
+                            <constraint firstItem="epk-8O-dIx" firstAttribute="leading" secondItem="FHr-T5-qCy" secondAttribute="trailing" constant="1" id="GbV-P0-CR5"/>
+                            <constraint firstItem="Kc7-p6-Uyu" firstAttribute="leading" secondItem="lVK-7Q-kDe" secondAttribute="leading" constant="107" id="Gxo-ki-uZG"/>
+                            <constraint firstItem="XEM-6x-XFM" firstAttribute="centerX" secondItem="FHr-T5-qCy" secondAttribute="centerX" id="JQr-sL-OXB"/>
+                            <constraint firstItem="epk-8O-dIx" firstAttribute="trailing" secondItem="XFa-fI-LxE" secondAttribute="trailingMargin" id="KQd-7a-bbl"/>
+                            <constraint firstItem="ogz-IO-2NK" firstAttribute="centerX" secondItem="lcE-UK-fGG" secondAttribute="centerX" id="Lyo-n5-NYH"/>
+                            <constraint firstItem="iON-UI-qYz" firstAttribute="centerX" secondItem="lcE-UK-fGG" secondAttribute="centerX" id="MQc-Rd-0TX"/>
+                            <constraint firstItem="FHr-T5-qCy" firstAttribute="top" secondItem="epk-8O-dIx" secondAttribute="top" id="NBI-Ye-sEv"/>
+                            <constraint firstItem="iON-UI-qYz" firstAttribute="top" secondItem="XFa-fI-LxE" secondAttribute="top" id="Pn0-7J-gYQ"/>
+                            <constraint firstItem="Kwo-Yt-DcZ" firstAttribute="centerX" secondItem="epk-8O-dIx" secondAttribute="centerX" id="QCg-RU-yj0"/>
+                            <constraint firstItem="mzI-dP-ijA" firstAttribute="top" secondItem="3aC-QW-6vX" secondAttribute="bottom" constant="11" id="RvQ-Oi-pYP"/>
+                            <constraint firstItem="rS3-kR-Sbf" firstAttribute="centerX" secondItem="lcE-UK-fGG" secondAttribute="centerX" id="Uzh-8n-L59"/>
+                            <constraint firstItem="Kc7-p6-Uyu" firstAttribute="top" secondItem="lcE-UK-fGG" secondAttribute="top" id="ZMH-tx-On4"/>
+                            <constraint firstAttribute="bottom" secondItem="iON-UI-qYz" secondAttribute="bottom" id="ZeI-sJ-Hj4"/>
+                            <constraint firstItem="vn0-JN-2MK" firstAttribute="top" secondItem="lVK-7Q-kDe" secondAttribute="top" constant="22" id="dY4-FK-Fa4"/>
+                            <constraint firstItem="FHr-T5-qCy" firstAttribute="bottom" secondItem="epk-8O-dIx" secondAttribute="bottom" id="gar-P6-qji"/>
+                            <constraint firstItem="XEM-6x-XFM" firstAttribute="leading" secondItem="lVK-7Q-kDe" secondAttribute="leading" constant="84" id="miD-AD-pHv"/>
+                            <constraint firstItem="ogz-IO-2NK" firstAttribute="centerX" secondItem="LP5-Js-C2H" secondAttribute="centerX" id="pOg-yG-tDr"/>
+                            <constraint firstItem="rS3-kR-Sbf" firstAttribute="leading" secondItem="lVK-7Q-kDe" secondAttribute="leading" constant="108" id="pTC-Gr-j8V"/>
+                            <constraint firstAttribute="trailing" secondItem="iON-UI-qYz" secondAttribute="trailing" id="pnB-fF-k4h"/>
+                            <constraint firstItem="iON-UI-qYz" firstAttribute="leading" secondItem="XFa-fI-LxE" secondAttribute="leading" id="qSe-Kl-lqx"/>
+                            <constraint firstItem="Kwo-Yt-DcZ" firstAttribute="top" secondItem="rS3-kR-Sbf" secondAttribute="bottom" constant="7" id="rqr-MN-xPv"/>
+                            <constraint firstItem="lVK-7Q-kDe" firstAttribute="trailing" secondItem="Kwo-Yt-DcZ" secondAttribute="trailing" constant="83" id="s9C-Bx-odS"/>
+                            <constraint firstItem="Kc7-p6-Uyu" firstAttribute="centerX" secondItem="lcE-UK-fGG" secondAttribute="centerX" id="vIG-gk-k2z"/>
+                            <constraint firstItem="Kc7-p6-Uyu" firstAttribute="top" secondItem="XFa-fI-LxE" secondAttribute="top" constant="139" id="yl0-nO-Wvi"/>
+                            <constraint firstItem="lVK-7Q-kDe" firstAttribute="bottom" secondItem="Kwo-Yt-DcZ" secondAttribute="bottom" constant="158" id="zPq-rC-e2H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lVK-7Q-kDe"/>
                     </view>
                     <connections>
